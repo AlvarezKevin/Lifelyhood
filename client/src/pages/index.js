@@ -1,9 +1,12 @@
 import React from "react";
 import logo from "../images/logo.svg";
-import "../components/Navbar/style.css";
+import "../styles/Home.css";
+import Navbar from "../components/Navbar";
+
 const Home = () => {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <img
           style={{ marginTop: "30px" }}

@@ -1,17 +1,10 @@
 import React from "react";
-import { Nav, NavLink, NavMenu, Bars } from "./NavbarElements";
-import { AiOutlineHome } from "react-icons/ai";
+import { Nav, NavLink, NavMenu } from "./NavbarElements";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/" activeStyle>
-          <div style={{ color: "black" }}>
-            <AiOutlineHome />
-          </div>
-        </NavLink>
-        <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>
             About

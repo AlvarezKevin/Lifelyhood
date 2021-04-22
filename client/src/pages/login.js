@@ -1,18 +1,17 @@
-import React from "react";
+import "../styles/Login.css";
+import {NavLink as Link} from "react-router-dom";
+import home from "../images/home.svg";
 
-const Login = () => {
+export default function Login() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-      }}
-    >
-      <h1>Login</h1>
+    <div className="Login">
+      <Link to="/">
+        <img
+          src={home}
+          className="home"
+          alt="logo"
+        />
+      </Link>
     </div>
   );
-};
-
-export default Login;
+}
