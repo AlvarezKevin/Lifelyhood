@@ -7,6 +7,9 @@ import Contact from "./pages/contact";
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
 import Profile from "./pages/profile";
+import Workspace from "./pages/workspace";
+import Schoolspace from "./pages/schoolspace";
+import Personalspace from "./pages/personalspace";
 
 function App() {
   return (
@@ -14,10 +17,13 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/contact-us" component={Contact} />
+        <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={SignUp} />
         <Route path="/profile" component={Profile} />
+        <Route path="/work" component={Workspace} />
+        <Route path="/school" component={Schoolspace} />
+        <Route path="/personal" component={Personalspace} />
       </Switch>
     </Router>
   );
