@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact-us" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/sign-up" component={SignUp} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </Router>
   );
