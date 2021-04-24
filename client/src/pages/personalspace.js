@@ -4,9 +4,10 @@ import health from "../images/personal/health.svg";
 import grocery from "../images/personal/grocery.svg";
 import journal from "../images/personal/journal.svg";
 import travel from "../images/personal/travel.svg";
-import add from "../images/add.svg";
+import add from "../images/personal/add.svg";
 import ProfileNav from "../components/ProfileNav";
 import UserInfo from "../components/UserInfo";
+import { Link } from "react-router-dom";
 
 const Personalspace = () => {
   return (
@@ -15,12 +16,12 @@ const Personalspace = () => {
         <div className="main">
             <UserInfo />
             <div className="pages">
-                <button><img src={fitness} alt="Fitness" /></button> 
-                <button><img src={health} alt="Health" /></button>
-                <button><img src={grocery} alt="Grocery" /></button>
-                <button><img src={journal} alt="Journal" /></button> 
-                <button><img src={travel} alt="Travel" /></button>
-                <button><img src={add} alt="Add Page" /></button>
+                <Link><img src={fitness} alt="Fitness" /></Link> 
+                <Link><img src={health} alt="Health" /></Link>
+                <Link><img src={grocery} alt="Grocery" /></Link>
+                <Link><img src={journal} alt="Journal" /></Link> 
+                <Link><img src={travel} alt="Travel" /></Link>
+                <Link><img src={add} alt="Add Page" /></Link>
             </div>  
         </div>  
     </div>

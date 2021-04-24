@@ -10,12 +10,6 @@
     align-content: center;
 }
 
-button {
-    border-style: none;
-    background: none;
-    padding: 1rem;
-}
-
-.link {
+:link {
     padding: 1rem;
 }
