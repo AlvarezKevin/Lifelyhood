@@ -24,7 +24,7 @@ const Schoolspace = () => {
         <p className="logout"> Log out </p> 
         <div className="main">
             <img className="user_info" src={profile} alt="profile_image"/>
-            <p className="user_info">User's Profile</p>
+            <p className="user_info">User's SchoolSpace</p>
             <div className="pages">
                 <button><img src={notes} alt="Notes" /></button> 
                 <button><img src={schedule} alt="Schedule" /></button>

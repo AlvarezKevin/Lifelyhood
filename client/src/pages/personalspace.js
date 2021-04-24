@@ -24,7 +24,7 @@ const Personalspace = () => {
         <p className="logout"> Log out </p> 
         <div className="main">
             <img className="user_info" src={profile} alt="profile_image"/>
-            <p className="user_info">User's Profile</p>
+            <p className="user_info">User's PersonalSpace</p>
             <div className="pages">
                 <button><img src={fitness} alt="Fitness" /></button> 
                 <button><img src={health} alt="Health" /></button>

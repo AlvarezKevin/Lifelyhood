@@ -24,7 +24,7 @@ const Workspace = () => {
         <p className="logout"> Log out </p> 
         <div className="main">
             <img className="user_info" src={profile} alt="profile_image"/>
-            <p className="user_info">User's Profile</p>
+            <p className="user_info">User's WorkSpace</p>
             <div className="pages">
                 <button><img src={jobapp} alt="Job Applications" /></button> 
                 <button><img src={tasks} alt="Tasks" /></button>
