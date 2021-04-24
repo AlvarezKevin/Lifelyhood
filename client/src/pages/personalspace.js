@@ -5,16 +5,15 @@ import grocery from "../images/personal/grocery.svg";
 import journal from "../images/personal/journal.svg";
 import travel from "../images/personal/travel.svg";
 import add from "../images/add.svg";
-import profile from "../images/profile/user/default.svg";
 import ProfileNav from "../components/ProfileNav";
+import UserInfo from "../components/UserInfo";
 
 const Personalspace = () => {
   return (
     <div className="profile">
         <ProfileNav />
         <div className="main">
-            <img className="user_info" src={profile} alt="profile_image"/>
-            <p className="user_info">User's PersonalSpace</p>
+            <UserInfo />
             <div className="pages">
                 <button><img src={fitness} alt="Fitness" /></button> 
                 <button><img src={health} alt="Health" /></button>

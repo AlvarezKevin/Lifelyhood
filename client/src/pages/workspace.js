@@ -5,7 +5,7 @@ import ledger from "../images/work/ledger.svg";
 import presentations from "../images/work/presentations.svg";
 import tasks from "../images/work/tasks.svg";
 import add from "../images/add.svg";
-import profile from "../images/profile/user/default.svg";
+import UserInfo from "../components/UserInfo";
 import ProfileNav from "../components/ProfileNav";
 
 const Workspace = () => {
@@ -13,8 +13,7 @@ const Workspace = () => {
     <div className="profile">
         <ProfileNav />
         <div className="main">
-            <img className="user_info" src={profile} alt="profile_image"/>
-            <p className="user_info">User's WorkSpace</p>
+            <UserInfo />
             <div className="pages">
                 <button><img src={jobapp} alt="Job Applications" /></button> 
                 <button><img src={tasks} alt="Tasks" /></button>
