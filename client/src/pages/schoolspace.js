@@ -1,27 +1,17 @@
 import React from "react";
-import notes from "../images/School/notes.svg";
-import schedule from "../images/School/schedule.svg";
-import clubs from "../images/School/clubs.svg";
-import exams from "../images/School/exams.svg";
-import assign from "../images/School/assign.svg";
-import add from "../images/School/add.svg";
-import calender from "../images/calender.svg";
-import settings from "../images/settings.svg";
-import purple from "../images/purple.svg";
-import blue from "../images/blue.svg";
-import profile from "../images/profile.svg";
-import {Link} from "react-router-dom"
+import notes from "../images/school/notes.svg";
+import schedule from "../images/school/schedule.svg";
+import clubs from "../images/school/clubs.svg";
+import exams from "../images/school/exams.svg";
+import assign from "../images/school/assign.svg";
+import add from "../images/add.svg";
+import profile from "../images/profile/user/default.svg";
+import ProfileNav from "../components/ProfileNav";
 
 const Schoolspace = () => {
   return (
     <div className="profile">
-        <div className="nav">
-          <Link to="/school" className="link"><img src={settings} alt="settings" /></Link>
-          <Link to="/personal" className="link"><img src={calender} alt="calender" /></Link>
-          <Link to="/personal" className="link"><img src={blue} alt="nav_personal" /></Link>
-          <Link to="/work" className="link"><img src={purple} alt="nav_work" /></Link>
-        </div>
-        <p className="logout"> Log out </p> 
+        <ProfileNav />
         <div className="main">
             <img className="user_info" src={profile} alt="profile_image"/>
             <p className="user_info">User's SchoolSpace</p>
