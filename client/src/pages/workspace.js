@@ -12,18 +12,30 @@ import { Link } from "react-router-dom";
 const Workspace = () => {
   return (
     <div className="profile">
-        <ProfileNav />
-        <div className="main">
-            <UserInfo />
-            <div className="pages">
-                <Link><img src={jobapp} alt="Job Applications" /></Link> 
-                <Link><img src={tasks} alt="Tasks" /></Link>
-                <Link><img src={meetings} alt="Meetings" /></Link>
-                <Link><img src={ledger} alt="Ledger" /></Link> 
-                <Link><img src={presentations} alt="Presentations" /></Link>
-                <Link><img src={add} alt="Add Page" /></Link>
-            </div>  
-        </div>  
+      <ProfileNav />
+      <div className="main">
+        <UserInfo />
+        <div className="pages">
+          <Link>
+            <img src={jobapp} alt="Job Applications" />
+          </Link>
+          <Link>
+            <img src={tasks} alt="Tasks" />
+          </Link>
+          <Link>
+            <img src={meetings} alt="Meetings" />
+          </Link>
+          <Link>
+            <img src={ledger} alt="Ledger" />
+          </Link>
+          <Link>
+            <img src={presentations} alt="Presentations" />
+          </Link>
+          <Link>
+            <img src={add} alt="Add Page" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

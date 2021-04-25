@@ -12,18 +12,30 @@ import { Link } from "react-router-dom";
 const Personalspace = () => {
   return (
     <div className="profile">
-        <ProfileNav />
-        <div className="main">
-            <UserInfo />
-            <div className="pages">
-                <Link><img src={fitness} alt="Fitness" /></Link> 
-                <Link><img src={health} alt="Health" /></Link>
-                <Link><img src={grocery} alt="Grocery" /></Link>
-                <Link><img src={journal} alt="Journal" /></Link> 
-                <Link><img src={travel} alt="Travel" /></Link>
-                <Link><img src={add} alt="Add Page" /></Link>
-            </div>  
-        </div>  
+      <ProfileNav />
+      <div className="main">
+        <UserInfo />
+        <div className="pages">
+          <Link>
+            <img src={fitness} alt="Fitness" />
+          </Link>
+          <Link>
+            <img src={health} alt="Health" />
+          </Link>
+          <Link>
+            <img src={grocery} alt="Grocery" />
+          </Link>
+          <Link>
+            <img src={journal} alt="Journal" />
+          </Link>
+          <Link>
+            <img src={travel} alt="Travel" />
+          </Link>
+          <Link>
+            <img src={add} alt="Add Page" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

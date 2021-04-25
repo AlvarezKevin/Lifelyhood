@@ -12,18 +12,30 @@ import { Link } from "react-router-dom";
 const Schoolspace = () => {
   return (
     <div className="profile">
-        <ProfileNav />
-        <div className="main">
-            <UserInfo />
-            <div className="pages">
-                <Link><img src={notes} alt="Notes" /></Link> 
-                <Link><img src={schedule} alt="Schedule" /></Link>
-                <Link><img src={clubs} alt="Clubs" /></Link>
-                <Link><img src={exams} alt="Exams" /></Link> 
-                <Link><img src={assign} alt="Assignments" /></Link>
-                <Link><img src={add} alt="Add Page" /></Link>
-            </div>  
-        </div>  
+      <ProfileNav />
+      <div className="main">
+        <UserInfo />
+        <div className="pages">
+          <Link>
+            <img src={notes} alt="Notes" />
+          </Link>
+          <Link>
+            <img src={schedule} alt="Schedule" />
+          </Link>
+          <Link>
+            <img src={clubs} alt="Clubs" />
+          </Link>
+          <Link>
+            <img src={exams} alt="Exams" />
+          </Link>
+          <Link>
+            <img src={assign} alt="Assignments" />
+          </Link>
+          <Link>
+            <img src={add} alt="Add Page" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
