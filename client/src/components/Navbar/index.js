@@ -6,19 +6,18 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
-          <NavLink to="/about" activeStyle>
+          <NavLink style={{ textDecoration: "none" }} to="/about">
             About
           </NavLink>
-          <NavLink to="/contact-us" activeStyle>
+          <NavLink style={{ textDecoration: "none" }} to="/contact-us">
             Contact Us
           </NavLink>
-          <NavLink to="/login" activeStyle>
+          <NavLink style={{ textDecoration: "none" }} to="/login">
             Log in
           </NavLink>
-          <NavLink to="/sign-up" activeStyle>
+          <NavLink style={{ textDecoration: "none" }} to="/sign-up">
             Sign Up
           </NavLink>
-          {/* <NavBtnLink to="/sign-in">Sign In</NavBtnLink> */}
         </NavMenu>
       </Nav>
     </>
