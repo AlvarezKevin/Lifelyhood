@@ -11,6 +11,10 @@ import Workspace from "./pages/workspace";
 import Schoolspace from "./pages/schoolspace";
 import Personalspace from "./pages/personalspace";
 import textEditor from "./pages/textEditor";
+import axios from 'axios';
+
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 function App() {
   return (
