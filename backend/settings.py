@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,7 +65,7 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-ROOT_URLCONF = 'lifelyhood.urls'
+ROOT_URLCONF = 'backend.urls'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -84,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lifelyhood.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
@@ -136,10 +137,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'lifelyhood/static',
+    BASE_DIR / 'backend/static',
 ]
 
-MEDIA_ROOT = BASE_DIR / 'lifelyhood/media'
+MEDIA_ROOT = BASE_DIR / 'backend/media'
 MEDIA_URL = '/media/'
 
 # https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
@@ -163,7 +164,6 @@ django_heroku.settings(locals())
 
 import dotenv
 import dj_database_url
-BASE_DIR = Path(__file__).resolve().root.root
 
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
