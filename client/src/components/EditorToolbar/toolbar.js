@@ -3,6 +3,9 @@ import { Editor, EditorState, RichUtils } from "draft-js";
 import BlockStyleToolbar, {
   getBlockStyle
 } from "./blockStyles/BlockStyleToolbar";
+import "../../styles/textEditor.css";
+
+
 
 class Toolbar extends React.Component {
   constructor(props) {
@@ -10,6 +13,7 @@ class Toolbar extends React.Component {
     this.state = {
       editorState: EditorState.createEmpty()
     };
+
   }
   toggleBlockType = blockType => {
     this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
@@ -33,19 +37,25 @@ class Toolbar extends React.Component {
     return "not-handled";
   };
 
+  onBoldClick = event => {
+    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
+  };
+  
   onUnderlineClick = () => {
     this.onChange(
       RichUtils.toggleInlineStyle(this.state.editorState, "UNDERLINE")
     );
   };
 
-  onBoldClick = event => {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
-  };
-
   onItalicClick = () => {
     this.onChange(
       RichUtils.toggleInlineStyle(this.state.editorState, "ITALIC")
+    );
+  };
+
+  onStrikeThroughClick = () => {
+    this.onChange(
+      RichUtils.toggleInlineStyle(this.state.editorState, "STRIKETHROUGH")
     );
   };
 
@@ -66,6 +76,10 @@ class Toolbar extends React.Component {
           <button className="styleButton" onClick={this.onItalicClick}>
             <em>I</em>
           </button>
+          <button className="styleButton" id="strikethrough" onClick={this.onStrikeThroughClick}>
+          abc
+        </button>
+       
           <BlockStyleToolbar
             editorState={this.state.editorState}
             onToggle={this.toggleBlockType}
