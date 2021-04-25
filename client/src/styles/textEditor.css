@@ -1,0 +1,50 @@
+body {
+  background-color: rgba(223, 227, 219, 1);
+}
+.editorContainer {
+  padding: 1em;
+  margin: 1em;
+}
+button,
+select {
+  background-image: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.styleButton#bold {
+  font-weight: bold;
+}
+
+.styleButton#italic {
+  font-style: italic;
+  font-family: serif;
+}
+
+.styleButton#underline {
+  text-decoration: underline;
+}
+
+.toolbar {
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.editors {
+  display: flex;
+  border-radius: 0px 0 3px 3px;
+  background-color: #fff;
+  box-shadow: 2px 10px 3px 5px rgba(15, 15, 15, 0.17);
+}
+.styleButton,
+.RichEditor-styleButton {
+  padding: 0.5em;
+  background-image: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  border: none;
+  margin: 0.5em;
+  width: 2.75em;
+  font-family: "Open Sans";
+  font-size: 15px;
+  height: 2.5em;
+  border-radius: 2px;
+}
