@@ -4,6 +4,6 @@ from django.urls import path, include
 from user_calendar import views
 
 router = DefaultRouter()
-router.register(r'events', views.TaskViewSet)
+router.register(r'events', views.EventViewSet)
 
 urlpatterns = router.urls

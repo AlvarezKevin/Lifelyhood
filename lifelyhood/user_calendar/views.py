@@ -9,7 +9,8 @@ class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     # without authtentication
-    permission_classes[
+    permission_classes = [
         permissions.AllowAny
     ]
-    
+
+
