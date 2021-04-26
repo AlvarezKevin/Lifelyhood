@@ -29,4 +29,3 @@ export const NavLink = styled(Link)`
 export const NavMenu = styled.div`
   float: right;
 `;
-
