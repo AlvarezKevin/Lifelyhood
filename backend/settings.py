@@ -26,10 +26,10 @@ SECRET_KEY = 'django-insecure-nn5+$+0r4iro(^*dca4$v0lc45vrbh+c+jwio@bws28%1^_7yd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['lifelyhood.herokuapp.com','127.0.0.1']
 
 STATIC_URL = '/static/'
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
@@ -63,11 +63,11 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'backend.urls'
 
 CORS_ORIGIN_ALLOW_ALL = True
+CSRF_COOKIE_NAME = "csrftoken"
 
 TEMPLATES = [
     {
@@ -137,7 +137,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'backend/static',
+    os.path.join(BASE_DIR,'build/static'),
 ]
 
 MEDIA_ROOT = BASE_DIR / 'backend/media'
