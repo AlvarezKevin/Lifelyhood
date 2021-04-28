@@ -1,8 +1,6 @@
 import React from "react";
 import { Editor, EditorState, RichUtils } from "draft-js";
-import BlockStyleToolbar, {
-  getBlockStyle
-} from "./blockStyles/BlockStyleToolbar";
+import BlockStyleToolbar, {getBlockStyle} from "./blockStyles/BlockStyleToolbar";
 import "../../styles/textEditor.css";
 
 
@@ -67,14 +65,15 @@ class Toolbar extends React.Component {
     return (
       <div className="editorContainer">
         <div className="toolbar">
-          <button className="styleButton" onClick={this.onUnderlineClick}>
+          <button className="styleButton" id="bold" onClick={this.onBoldClick}>
+            B
+          </button>
+          <button className="styleButton" id="underline"onClick={this.onUnderlineClick}>
             U
           </button>
-          <button className="styleButton" onClick={this.onBoldClick}>
-            <b>B</b>
-          </button>
-          <button className="styleButton" onClick={this.onItalicClick}>
-            <em>I</em>
+          
+          <button className="styleButton" id="italic" onClick={this.onItalicClick}>
+            I
           </button>
           <button className="styleButton" id="strikethrough" onClick={this.onStrikeThroughClick}>
           abc

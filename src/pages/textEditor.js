@@ -11,7 +11,6 @@ class textEditor extends Component {
     return(
         <div >
             <Toolbar/>
-        
         </div>
     );
 }}

@@ -19,11 +19,10 @@ export const HEADER_TYPES = [
     { label: "H5", style: "header-five" },
     { label: "H6", style: "header-six" }
 ];
-
 export function getBlockStyle(block) {
     switch (block.getType()) {
         case "blockquote":
-            return "RichEditor-blockquote";
+            return "superFancyBlockquote";
         default:
             return null;
     }
