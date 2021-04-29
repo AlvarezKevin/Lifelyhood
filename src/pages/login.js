@@ -5,7 +5,6 @@ import { useState } from "react";
 import LoginForm from "./LoginForm";
 
 export default function Login() {
-  // Admin detail (it will be changed once we plug database to frontend)
   const adminUser = {
     email: "admin@admin.com",
     password: "admin123",
@@ -90,19 +89,20 @@ const LogoNav = styled.img`
   padding-top: 2rem;
   padding-left: 2rem;
   cursor: pointer;
-  width: 6.5%;
+  width: 8vw;
   height: auto;
 `;
 
 const FlexMain = styled.main`
   margin: 0;
   display: flex;
-  flex: 1;
+  padding-top: 3%;
+  padding-bottom: 3%;
 `;
 
 const FlexArticle = styled.article` {
   background-color: white;
-  flex: 4 4;
+  flex: 1 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +111,9 @@ const FlexArticle = styled.article` {
 const FlexFooter = styled.footer`
   background-color: white;
   text-align: center;
-  padding: 2rem 20rem;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 35rem;
   font-size: 1.2rem;
 `;
 

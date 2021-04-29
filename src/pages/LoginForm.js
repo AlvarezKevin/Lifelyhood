@@ -68,12 +68,13 @@ const InputField = styled.input`
   border-radius: 15px;
   background-color: #dfe3db;
   font-size: 2rem;
+  outline: none;
 `;
 
 const FormStyle = styled.form`
   display: block;
   position: relative;
-  background-color: white;
+  margin-top: 5vh;
 `;
 
 const FormInner = styled.div`
@@ -81,13 +82,12 @@ const FormInner = styled.div`
   display: block;
   background-color: #fff;
   padding: 30px;
-  z-index: 2;
 `;
 
 const FormGroup = styled.div`
   display: block;
   width: 300px;
-  margin-bottom: 15px;
+  margin-bottom: 1vh;
 `;
 
 const FormGroupLabel = styled.label`
