@@ -3,6 +3,27 @@ import logo from "../images/logo.svg";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 
+const Home = () => {
+  return (
+    <App>
+      <Navbar />
+      <AppHeader>
+        <AppLogo style={{ marginTop: "30px" }} src={logo} alt="logo" />
+        <p style={{ paddingTop: "30px" }}>LIFE CONDENSED</p>
+        <p style={{ paddingTop: "10px", fontSize: `calc(15px + 1vmin)` }}>
+          THE TOOL THAT BRINGS ORDER TO YOUR CHAOTiC LIFE
+        </p>
+      </AppHeader>
+      <Footer>
+        <p>&#169;2021 LIFELYHOOD</p>
+      </Footer>
+    </App>
+  );
+};
+
+export default Home;
+
+// Style
 const App = styled.div`
   text-align: center;
   text-decoration: none;
@@ -29,22 +50,3 @@ const Footer = styled.div`
   background: white;
   font-size: calc(10px + 1vmin);
 `;
-const Home = () => {
-  return (
-    <App>
-      <Navbar />
-      <AppHeader>
-        <AppLogo style={{ marginTop: "30px" }} src={logo} alt="logo" />
-        <p style={{ paddingTop: "30px" }}>LIFE CONDENSED</p>
-        <p style={{ paddingTop: "10px", fontSize: `calc(15px + 1vmin)` }}>
-          THE TOOL THAT BRINGS ORDER TO YOUR CHAOTiC LIFE
-        </p>
-      </AppHeader>
-      <Footer>
-        <p>&#169;2021 LIFELYHOOD</p>
-      </Footer>
-    </App>
-  );
-};
-
-export default Home;
