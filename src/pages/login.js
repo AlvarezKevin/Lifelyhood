@@ -11,7 +11,7 @@ export default function Login() {
     password: "admin123",
   };
 
-  const [user, setUser] = useState({ name: "", email: "" });
+  const [user, setUser] = useState({ email: "" });
   const [error, setError] = useState("");
   const Login = (details) => {
     console.log(details);
@@ -32,7 +32,7 @@ export default function Login() {
 
   const Logout = () => {
     console.log("Logout");
-    setUser({ name: "", email: "" });
+    setUser({ email: "" });
   };
 
   return (
@@ -44,23 +44,20 @@ export default function Login() {
           </Link>
         </FlexHeader>
         <FlexMain>
-          <FlexNav></FlexNav>
           <FlexArticle>
-            <div>MAIN CONTENT</div>
             <div className="App">
               {user.email !== "" ? (
                 <div className="welcome">
                   <h2>
                     Welcome, <span>{user.name}</span>
                   </h2>
-                  <button onClick={Logout}>Logout</button>
+                  <ButtonStyle onClick={Logout}>Logout</ButtonStyle>
                 </div>
               ) : (
                 <LoginForm Login={Login} error={error} />
               )}
             </div>
           </FlexArticle>
-          <FlexAside></FlexAside>
         </FlexMain>
         <FlexFooter>
           By clicking “Log in” above, you acknowledge that you have read and
@@ -74,57 +71,56 @@ export default function Login() {
 // Style
 const UniveralDiv = styled.div`
   margin: 2px;
+  padding: 0;
+  box-sizing: border-box;
   font-size: 24px;
   color: black;
-  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
-  @media all and (max-width: 600px) {
-    .flex-main {
-      flex-direction: column;
-    }
-  }
 `;
 
 const FlexHeader = styled.header`
   background-color: white;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 `;
 
 const LogoNav = styled.img`
   display: flex;
   float: left;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
   cursor: pointer;
+  width: 6.5%;
+  height: auto;
 `;
 
 const FlexMain = styled.main`
+  margin: 0;
   display: flex;
   flex: 1;
 `;
 
-const FlexNav = styled.nav`
-  background-color: black;
-  padding-top: 3rem;
-  flex: 1 1 5rem;
-`;
-
 const FlexArticle = styled.article` {
   background-color: white;
-  padding-top: 3rem;
-  flex: 3 3;
+  flex: 4 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   `;
-
-const FlexAside = styled.aside`
-  background-color: black;
-  padding-top: 3rem;
-  flex: 1 1 5rem;
-`;
 
 const FlexFooter = styled.footer`
   background-color: white;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  text-align: center;
+  padding: 2rem 20rem;
+  font-size: 1.2rem;
+`;
+
+const ButtonStyle = styled.input`
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: blue;
+  background-color: black;
 `;
