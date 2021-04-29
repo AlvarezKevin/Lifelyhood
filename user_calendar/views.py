@@ -13,8 +13,14 @@ class EventViewSet(viewsets.ModelViewSet):
         BasicAuthentication
     ]
     permission_classes = [
-        IsOwner
+        IsOwner,
+        permissions.IsAuthenticated
     ]
     queryset = Event.objects.all()
     serializer_class = EventSerializer
 
+    def get_queryset(self):
+        return Event.objects.filter(owner=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
