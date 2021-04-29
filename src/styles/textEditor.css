@@ -1,15 +1,18 @@
-body {
+html {
   background-color: rgba(223, 227, 219, 1);
 }
+
 .editorContainer {
-  padding: 1em;
-  margin: 1em;
+  background-color: rgba(223, 227, 219, 1);
 }
 button,
 select {
   background-image: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+button:hover {
+  color: rgba(178, 194, 163, 1);
+}
+
 .styleButton#strikethrough {
   text-decoration: line-through;
 }
@@ -27,6 +30,7 @@ select {
 }
 
 .toolbar {
+  background-color: rgba(223, 227, 219, 1);
   text-align: center;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -39,7 +43,6 @@ select {
   font-family: "Open Sans";
   font-size: 100%;
   border-radius: 0px 0 3px 3px;
-  background-color: #fff;
   box-shadow: 2px 10px 3px 5px rgba(15, 15, 15, 0.17);
 }
 select {
@@ -60,7 +63,27 @@ select {
   font-size: 15px;
   height: 2.5em;
   border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .RichEditor-activeButton {
   color: rgba(178, 194, 163, 1);
+}
+
+.RichEditor-controls {
+  background-color: rgba(223, 227, 219, 1);
+}
+.superFancyBlockquote {
+  color: #666;
+  font-family: "Hoefler Text", Georgia, serif;
+  font-style: italic;
+  border-left: 3px solid #eee;
+  margin: 10px 0;
+  padding: 10px 15px;
+}
+.public-DraftStyleDefault-pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: "Inconsolata", "Menlo", "Consolas", monospace;
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px 15px 0px 10px;
 }
