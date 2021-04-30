@@ -9,7 +9,7 @@ import {
   FlexMain,
   FlexArticle,
   FlexFooter,
-} from "../styles/LoginStyle";
+} from "../styles/SignUpStyle";
 
 export default function Login() {
   const adminUser = {
@@ -36,10 +36,10 @@ export default function Login() {
     }
   };
 
-  const Logout = () => {
-    console.log("Logout");
-    setUser({ email: "" });
-  };
+  // const Logout = () => {
+  //   console.log("Logout");
+  //   setUser({ email: "" });
+  // };
 
   return (
     <>
@@ -52,14 +52,14 @@ export default function Login() {
         <FlexMain>
           <FlexArticle>
             {user.email !== "" ? (
-              <>{history.push("/profile")}</>
+              history.push("/profile")
             ) : (
               <LoginForm Login={Login} error={error} />
             )}
           </FlexArticle>
         </FlexMain>
         <FlexFooter>
-          By clicking “Log in” above, you acknowledge that you have read and
+          By clicking “Sign Up” above, you acknowledge that you have read and
           understood, and agree to Lifelyhood's Terms & Conditions.
         </FlexFooter>
       </Home>

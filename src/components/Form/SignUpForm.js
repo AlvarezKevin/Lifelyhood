@@ -7,7 +7,7 @@ import {
   FormGroup,
   FormGroupLabel,
   ErrorMessage,
-} from "../../styles/LoginStyle";
+} from "../../styles/SignUpStyle";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
@@ -51,7 +51,7 @@ function LoginForm({ Login, error }) {
             value={details.password}
           />
         </FormGroup>
-        <InputButton type="submit" value="Log in" />
+        <InputButton type="submit" value="Sign Up" />
       </FormInner>
     </FormStyle>
   );
