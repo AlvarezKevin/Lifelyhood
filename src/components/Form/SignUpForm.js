@@ -7,7 +7,7 @@ import {
   FormGroup,
   FormGroupLabel,
   ErrorMessage,
-} from "../styles/LoginAndSignUpStyle";
+} from "../../styles/LoginStyle";
 
 function LoginForm({ Login, error }) {
   const [details, setDetails] = useState({ name: "", email: "", password: "" });
@@ -19,7 +19,7 @@ function LoginForm({ Login, error }) {
     <FormStyle onSubmit={submitHandler}>
       <FormInner>
         {error !== "" ? <ErrorMessage>{error}</ErrorMessage> : ""}
-        {/* <FormGroup>
+        <FormGroup>
           <FormGroupLabel htmlFor="name">Name</FormGroupLabel>
           <InputField
             type="text"
@@ -28,7 +28,7 @@ function LoginForm({ Login, error }) {
             onChange={(e) => setDetails({ ...details, name: e.target.value })}
             value={details.name}
           />
-        </FormGroup> */}
+        </FormGroup>
         <FormGroup>
           <FormGroupLabel htmlFor="email">Email</FormGroupLabel>
           <InputField

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import home from "../images/home.svg";
 import { useState } from "react";
-import LoginForm from "./LoginForm";
+import LoginForm from "../components/Form/LoginForm";
 import {
   Home,
   FlexHeader,
@@ -9,14 +9,14 @@ import {
   FlexMain,
   FlexArticle,
   FlexFooter,
-  ButtonStyle,
-} from "../styles/LoginAndSignUpStyle";
+} from "../styles/LoginStyle";
 
 export default function Login() {
   const adminUser = {
     email: "admin@admin.com",
     password: "admin123",
   };
+  let history = useHistory();
 
   const [user, setUser] = useState({ email: "" });
   const [error, setError] = useState("");
@@ -52,9 +52,7 @@ export default function Login() {
         <FlexMain>
           <FlexArticle>
             {user.email !== "" ? (
-              <>
-                <h1>Hello</h1>
-              </>
+              <>{history.push("/profile")}</>
             ) : (
               <LoginForm Login={Login} error={error} />
             )}
