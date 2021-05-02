@@ -9,6 +9,4 @@ class Note(models.Model):
     title = models.CharField(max_length=50,blank=True)
     text = models.CharField(max_length=10000,blank=True)
     date_posted = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return self.user.username
+    
