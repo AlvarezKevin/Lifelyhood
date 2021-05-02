@@ -6,6 +6,9 @@ body {
 .container {
   text-align: center;
 }
+.content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+}
 
 .info {
   color: rgba(131, 123, 123, 1);
@@ -13,12 +16,17 @@ body {
 .modo {
   font-size: 1.25em;
 }
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
 
 footer {
   color: white;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
+  height: 2.5rem;
   width: 100%;
   background-color: rgba(178, 194, 163, 1);
 }
