@@ -1,0 +1,30 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.container {
+  text-align: left;
+}
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
+.heading {
+  text-align: center;
+}
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+.address {
+  margin-bottom: 0px;
+}
+footer {
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100%;
+  background-color: rgba(178, 194, 163, 1);
+}
