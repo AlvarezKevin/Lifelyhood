@@ -22,7 +22,7 @@ export default function Login() {
           </div>
           <div className="address">
             <h2><b>Lifelyhood Office</b></h2>
-            <h2>New York, United States</h2>
+            <h3>New York, United States</h3>
             <p>Lifelyhood Corporation</p>
             <p> 151 W 34th St, </p>
             <p>New York, NY 10001</p>
