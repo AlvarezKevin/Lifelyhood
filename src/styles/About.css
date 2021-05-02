@@ -1,0 +1,24 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.container {
+  text-align: center;
+}
+
+.info {
+  color: rgba(131, 123, 123, 1);
+}
+.modo {
+  font-size: 1.25em;
+}
+
+footer {
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(178, 194, 163, 1);
+}
