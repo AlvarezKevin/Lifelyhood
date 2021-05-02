@@ -13,11 +13,12 @@ export default function Login() {
           </Link>
         </div>
 
-        <div className="container">
-          <div>
+        <div className="contain">
+          <div className="heading">
             <h1><b>About Lifelyhood</b></h1>
-            <h2><b>Lifelyhood for Everyone</b></h2>
           </div>
+          <h2><b>Lifelyhood for Everyone</b></h2>
+          
           <img src={pic} alt="Stress free" />
           <div className="modo">
             <p>
