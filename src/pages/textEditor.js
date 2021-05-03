@@ -9,9 +9,11 @@ class textEditor extends Component {
     render(){
 
     return(
-        <div >
+        
+        <div className="pg">
             <Toolbar/>
         </div>
+    
     );
 }}
 export default textEditor;

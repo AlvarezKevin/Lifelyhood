@@ -16,7 +16,7 @@ const Schoolspace = () => {
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <Link>
+          <Link to="/editor">
             <img src={notes} alt="Notes" />
           </Link>
           <Link>
