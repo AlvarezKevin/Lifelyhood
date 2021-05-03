@@ -3,7 +3,7 @@ import home from "../images/home.svg";
 import pic from "../images/about/manage.png";
 //import kazi from "../images/about/manage.png";
 import myriam from "../images/about/myPic.jpg";
-//import niharika from "../images/about/manage.png";
+import niharika from "../images/about/nPic.jpg";
 //import hammad from "../images/about/manage.png";
 import kevin from "../images/about/kPic.jpg";
 //import mike from "../images/about/manage.png";
@@ -37,30 +37,30 @@ export default function Login() {
             <h3>Frontend</h3>
             <ul id="creator-profile">
               <li>
-                  <img src=".jpg" width="200" height="225" alt="Kazi Siam" title="Kazi Siam" />
+                  <img src=".jpg" width="150" height="225" alt="Kazi Siam" title="Kazi Siam" />
                   <p>Kazi Siam</p>
               </li>
               <li>
-                  <img src={myriam} width="190" height="225" alt="Myriam Yumbla" title="Myriam Yumbla" />
+                  <img src={myriam} max-width="100%" height="225" alt="Myriam Yumbla" title="Myriam Yumbla" />
                   <p>Myriam Yumbla</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="225" alt="Niharika Alam" title="Niharika Alam" />
+                  <img src={niharika} max-width="100%" height="225" alt="Niharika Alam" title="Niharika Alam" />
                   <p>Niharika Alam</p>
               </li>
             </ul>
             <h3>Backend</h3>
             <ul id="creator-profile">
               <li>
-                  <img src=".jpg" width="200" height="225" alt="Hammad" title="Hammad" />
+                  <img src=".jpg" width="150" height="225" alt="Hammad" title="Hammad" />
                   <p>Hammad</p>
               </li>
               <li>
-                  <img src={kevin} width="190" height="225" alt="Kevin Alvarez" title="Kevin Alvarez" />
+                  <img src={kevin} max-width="100%" height="225" alt="Kevin Alvarez" title="Kevin Alvarez" />
                   <p>Kevin Alvarez</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="225" alt="Mike Neri" title="Mike Neri" />
+                  <img src=".jpg" width="150" height="225" alt="Mike Neri" title="Mike Neri" />
                   <p>Mike Neri</p>
               </li>
             </ul>
