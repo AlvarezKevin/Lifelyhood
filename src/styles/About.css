@@ -5,13 +5,20 @@ body {
 }
 .contain {
   text-align: center;
+  padding: 0 7.5vw;
 }
 .content-wrap {
   padding-bottom: 2.5rem; /* Footer height */
+  background-color: #fff;
 }
 
-.info {
+#info {
   color: rgba(131, 123, 123, 1);
+}
+.logo {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  width: 8vw;
 }
 .modo {
   font-size: 1.25em;
@@ -21,6 +28,14 @@ body {
   min-height: 100vh;
 }
 
+#creator-profile li {
+  width: 225px;
+  display: inline-block;
+}
+#creator-profile li p {
+  margin: 10px 0 20px 0;
+}
+
 footer {
   color: white;
   position: absolute;
@@ -28,5 +43,5 @@ footer {
   bottom: 0;
   height: 2.5rem;
   width: 100%;
-  background-color: rgba(178, 194, 163, 1);
+  background-color: rgb(36, 65, 9);
 }

@@ -8,7 +8,7 @@ export default function Login() {
       <div className="content-wrap">
         <div>
           <Link to="/">
-            <img src={home} className="home" alt="logo" />
+            <img src={home} className="logo" alt="logo" />
           </Link>
         </div>
 
@@ -17,19 +17,19 @@ export default function Login() {
         </div>
          
         <div className="container">
-            <h2><b>Get Support</b></h2>
-            <p>
+          <h2><b>Get Support</b></h2>
+          <p>
             If you’re having trouble with Lifelyhood, get assistance from other Lifelyhood users or call us at +1 (888) 431 6051.
-            </p>
+          </p>
 
-            <hr></hr>
+          <hr></hr>
           
-            <h2><b>Lifelyhood Office</b></h2>
-            <h4>New York, United States</h4>
-            <p className="address">Lifelyhood Corporation</p>
-            <p className="address"> 151 W 34th St, </p>
-            <p className="address">New York, NY 10001</p>
-          </div>
+          <h2><b>Lifelyhood Office</b></h2>
+          <h4>New York, United States</h4>
+          <p>Lifelyhood Corporation <br></br>
+          151 W 34th St,<br></br>
+          New York, NY 10001</p>
+        </div>
           
         
         <footer>

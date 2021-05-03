@@ -16,9 +16,7 @@ body {
   position: relative;
   min-height: 100vh;
 }
-.address {
-  margin-bottom: 0px;
-}
+
 footer {
   color: white;
   position: absolute;

@@ -9,34 +9,61 @@ export default function Login() {
       <div className="content-wrap">
         <div>
           <Link to="/">
-            <img src={home} className="home" alt="logo" />
+            <img src={home} className="logo" alt="logo" />
           </Link>
         </div>
-
-        <div className="contain">
-          <div className="heading">
-            <h1><b>About Lifelyhood</b></h1>
-          </div>
-          <h2><b>Lifelyhood for Everyone</b></h2>
+        
           
+        
+        <div className="contain">
+          <h1><b>About Lifelyhood</b></h1>
+          <h2><b>Lifelyhood for Everyone</b></h2>
           <img src={pic} alt="Stress free" />
           <div className="modo">
             <p>
               Enough workspaces to keep all your notes, projects, and work organized.
             </p>
           </div>
-          <div className="info">
-            <p>Work smater, not harder</p>
-          </div>
-          <div className="team">
+          <p id="info">Work smater, not harder</p>
+          <hr></hr>
+          <div>
             <h2>Our Creators</h2>
+            <h3>Frontend</h3>
+            <ul id="creator-profile">
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Kazi Siam" title="Kazi Siam" />
+                  <p>Kazi Siam</p>
+              </li>
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Myriam Yumbla" title="Myriam Yumbla" />
+                  <p>Myriam Yumbla</p>
+              </li>
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Niharika Alam" title="Niharika Alam" />
+                  <p>Niharika Alam</p>
+              </li>
+            </ul>
+            <h3>Backend</h3>
+            <ul id="creator-profile">
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Hammad" title="Hammad" />
+                  <p>Hammad</p>
+              </li>
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Kevin Alvarez" title="Kevin Alvarez" />
+                  <p>Kevin Alvarez</p>
+              </li>
+              <li>
+                  <img src=".jpg" width="200" height="200" alt="Mike Neri" title="Mike Neri" />
+                  <p>Mike Neri</p>
+              </li>
+            </ul>
             
-
           </div>
-          <footer>
-            <p>&#169;2021 LIFELYHOOD</p>
-          </footer>
         </div>
+        <footer>
+          <p>&#169;2021 LIFELYHOOD</p>
+        </footer>
       </div>
     </div>
   );
