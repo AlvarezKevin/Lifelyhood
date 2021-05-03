@@ -63,6 +63,7 @@ class Toolbar extends React.Component {
 
   render() {
     return (
+      
       <div className="editorContainer">
         <div className="toolbar">
           <button className="styleButton" id="bold" onClick={this.onBoldClick}>
