@@ -11,6 +11,8 @@ import {
   FlexFooter,
 } from "../styles/SignUpStyle";
 
+import { signupNewUser } from "./SignupActions"; // new import
+
 export default function Login() {
   const adminUser = {
     email: "admin@admin.com",

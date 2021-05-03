@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/App.css";
+import Root from "./Root"; 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Home from "./pages";
 import About from "./pages/about";
 import Contact from "./pages/contact";
