@@ -11,7 +11,12 @@ body {
   padding-bottom: 2.5rem; /* Footer height */
   background-color: #fff;
 }
-
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 #info {
   color: rgba(131, 123, 123, 1);
 }

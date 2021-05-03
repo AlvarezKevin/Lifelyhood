@@ -1,6 +1,12 @@
 import { NavLink as Link } from "react-router-dom";
 import home from "../images/home.svg";
-import pic from "../images/manage.png";
+import pic from "../images/about/manage.png";
+//import kazi from "../images/about/manage.png";
+import myriam from "../images/about/myPic.jpg";
+//import niharika from "../images/about/manage.png";
+//import hammad from "../images/about/manage.png";
+//import kevin from "../images/about/manage.png";
+//import mike from "../images/about/manage.png";
 import "../styles/About.css";
 
 export default function Login() {
@@ -18,7 +24,7 @@ export default function Login() {
         <div className="contain">
           <h1><b>About Lifelyhood</b></h1>
           <h2><b>Lifelyhood for Everyone</b></h2>
-          <img src={pic} alt="Stress free" />
+          <img src={pic} className="center_img" alt="Stress free" />
           <div className="modo">
             <p>
               Enough workspaces to keep all your notes, projects, and work organized.
@@ -31,30 +37,30 @@ export default function Login() {
             <h3>Frontend</h3>
             <ul id="creator-profile">
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Kazi Siam" title="Kazi Siam" />
+                  <img src=".jpg" width="200" height="225" alt="Kazi Siam" title="Kazi Siam" />
                   <p>Kazi Siam</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Myriam Yumbla" title="Myriam Yumbla" />
+                  <img src={myriam} width="200" height="225" alt="Myriam Yumbla" title="Myriam Yumbla" />
                   <p>Myriam Yumbla</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Niharika Alam" title="Niharika Alam" />
+                  <img src=".jpg" width="200" height="225" alt="Niharika Alam" title="Niharika Alam" />
                   <p>Niharika Alam</p>
               </li>
             </ul>
             <h3>Backend</h3>
             <ul id="creator-profile">
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Hammad" title="Hammad" />
+                  <img src=".jpg" width="200" height="225" alt="Hammad" title="Hammad" />
                   <p>Hammad</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Kevin Alvarez" title="Kevin Alvarez" />
+                  <img src=".jpg" width="200" height="225" alt="Kevin Alvarez" title="Kevin Alvarez" />
                   <p>Kevin Alvarez</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="200" alt="Mike Neri" title="Mike Neri" />
+                  <img src=".jpg" width="200" height="225" alt="Mike Neri" title="Mike Neri" />
                   <p>Mike Neri</p>
               </li>
             </ul>
