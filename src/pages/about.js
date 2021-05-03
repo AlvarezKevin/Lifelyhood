@@ -5,7 +5,7 @@ import pic from "../images/about/manage.png";
 import myriam from "../images/about/myPic.jpg";
 //import niharika from "../images/about/manage.png";
 //import hammad from "../images/about/manage.png";
-//import kevin from "../images/about/manage.png";
+import kevin from "../images/about/kPic.jpg";
 //import mike from "../images/about/manage.png";
 import "../styles/About.css";
 
@@ -41,7 +41,7 @@ export default function Login() {
                   <p>Kazi Siam</p>
               </li>
               <li>
-                  <img src={myriam} width="200" height="225" alt="Myriam Yumbla" title="Myriam Yumbla" />
+                  <img src={myriam} width="190" height="225" alt="Myriam Yumbla" title="Myriam Yumbla" />
                   <p>Myriam Yumbla</p>
               </li>
               <li>
@@ -56,7 +56,7 @@ export default function Login() {
                   <p>Hammad</p>
               </li>
               <li>
-                  <img src=".jpg" width="200" height="225" alt="Kevin Alvarez" title="Kevin Alvarez" />
+                  <img src={kevin} width="190" height="225" alt="Kevin Alvarez" title="Kevin Alvarez" />
                   <p>Kevin Alvarez</p>
               </li>
               <li>
