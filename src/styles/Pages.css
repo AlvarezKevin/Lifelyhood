@@ -36,7 +36,7 @@
     bottom: 0;
     right: 50%;
     height:4px;
-    background-color: powderblue;
+    background-color: #A3B7C2;
     transition: .5s;
 }
     
@@ -47,7 +47,7 @@
     left: 50%;
     width: 90px;
     height:4px;
-    background-color: powderblue;
+    background-color: #A3B7C2;
 }
 
 .page-img{

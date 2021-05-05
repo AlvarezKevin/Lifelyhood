@@ -21,7 +21,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={fitness} alt="Fitness" />
+                <img src={fitness} alt="Fitness" />
               </Link>
               <h5>Fitness</h5>
             </div>
@@ -30,7 +30,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={health} alt="Health" />
+                <img src={health} alt="Health" />
               </Link>
               <h5>Health</h5>
             </div>
@@ -39,7 +39,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={grocery} alt="Grocery" />
+                <img src={grocery} alt="Grocery" />
               </Link>
               <h5>Grocery</h5>
             </div>
@@ -48,7 +48,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={journal} alt="Journal" />
+                <img src={journal} alt="Journal" />
               </Link>
               <h5>Journal</h5>
             </div>
@@ -57,7 +57,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={travel} alt="Travel" />
+                <img src={travel} alt="Travel" />
               </Link>
               <h5>Travel</h5>
             </div>
@@ -66,7 +66,7 @@ const Personalspace = () => {
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
-                <img className="page-ico" src={add} alt="Add Page" />
+                <img src={add} alt="Add Page" />
               </Link>
               <h5>Add Page</h5>
             </div>

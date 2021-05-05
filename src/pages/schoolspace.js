@@ -16,24 +16,61 @@ const Schoolspace = () => {
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <Link to="/editor">
-            <img src={notes} alt="Notes" />
-          </Link>
-          <Link>
-            <img src={schedule} alt="Schedule" />
-          </Link>
-          <Link>
-            <img src={clubs} alt="Clubs" />
-          </Link>
-          <Link>
-            <img src={exams} alt="Exams" />
-          </Link>
-          <Link>
-            <img src={assign} alt="Assignments" />
-          </Link>
-          <Link>
-            <img src={add} alt="Add Page" />
-          </Link>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link to="/editor" className="page-img">
+                <img src={notes} alt="Notes" />
+              </Link>
+              <h5>Notes</h5>
+            </div>
+          </div>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link className="page-img">
+                <img src={schedule} alt="Schedule" />
+              </Link>
+              <h5>Schedule</h5>
+            </div>
+          </div>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link className="page-img">
+                <img src={clubs} alt="Clubs" />
+              </Link>
+              <h5>Clubs</h5>
+            </div>
+          </div>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link className="page-img">
+                <img src={exams} alt="Exams" />
+              </Link>
+              <h5>Exams</h5>
+            </div>
+          </div>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link className="page-img">
+                <img src={assign} alt="Assignments" />
+              </Link>
+              <h5>Assignments</h5>
+            </div>
+          </div>
+
+          <div className="page-box">
+            <div className="page-title">
+              <Link className="page-img">
+                <img src={add} alt="Add Page" />
+              </Link>
+              <h5>Add Page</h5>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
