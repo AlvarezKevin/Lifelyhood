@@ -2,19 +2,21 @@ import React from "react";
 import "./styles/App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import SignUp from "./pages/signup";
-import Login from "./pages/login";
+import About from "./pages/Public/about";
+import Contact from "./pages/Public/contact";
+import SignUp from "./pages/Public/signup";
+import Login from "./pages/Public/login";
 import Profile from "./pages/profile";
 import Workspace from "./pages/workspace";
 import Schoolspace from "./pages/schoolspace";
 import Personalspace from "./pages/personalspace";
 import textEditor from "./pages/textEditor";
-import axios from 'axios';
+import axios from "axios";
+import { ToastContainer } from "react-toastify";
 
-axios.defaults.xsrfCookieName = 'csrftoken'
-axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+<ToastContainer hideProgressBar={true} newestOnTop={true} />;
+axios.defaults.xsrfCookieName = "csrftoken";
+axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 function App() {
   return (

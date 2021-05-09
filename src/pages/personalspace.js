@@ -7,17 +7,16 @@ import travel from "../images/personal/travel.svg";
 import add from "../images/personal/add.svg";
 import ProfileNav from "../components/ProfileNav";
 import UserInfo from "../components/UserInfo";
-import "../styles/Pages.css"
+import "../styles/Pages.css";
 import { Link } from "react-router-dom";
 
-const Personalspace = () => {    
+const Personalspace = () => {
   return (
     <div className="profile">
       <ProfileNav />
       <div className="main">
         <UserInfo />
         <div className="pages">
-          
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
@@ -71,7 +70,6 @@ const Personalspace = () => {
               <h5>Add Page</h5>
             </div>
           </div>
-    
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import {
   InputButton,
   InputField,
@@ -7,54 +8,64 @@ import {
   FormGroup,
   FormGroupLabel,
   ErrorMessage,
-} from "../../styles/SignUpStyle";
+} from "./style";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
-  const submitHandler = (e) => {
-    e.preventDefault();
-    Login(details);
+function SignupForm({ onSubmitData, error }) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const submitHandler = (data) => {
+    console.log(`data`, data);
+    onSubmitData(data);
   };
   return (
-    <FormStyle onSubmit={submitHandler}>
+    <FormStyle onSubmit={handleSubmit(submitHandler)}>
       <FormInner>
-        {error !== "" ? <ErrorMessage>{error}</ErrorMessage> : ""}
         <FormGroup>
-          <FormGroupLabel htmlFor="name">Name</FormGroupLabel>
+          <FormGroupLabel htmlFor="name">
+            Name
+            {errors.name?.type === "required" && (
+              <ErrorMessage>Name is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
           <InputField
             type="text"
-            name="name"
             id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
+            {...register("name", { required: true })}
           />
         </FormGroup>
         <FormGroup>
-          <FormGroupLabel htmlFor="email">Email</FormGroupLabel>
+          <FormGroupLabel htmlFor="email">
+            Email
+            {errors.email?.type === "required" && (
+              <ErrorMessage>Email is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
           <InputField
-            type="text"
-            name="email"
+            type="email"
             id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
+            {...register("email", { required: true })}
           />
         </FormGroup>
         <FormGroup>
-          <FormGroupLabel htmlFor="password">Password</FormGroupLabel>
+          <FormGroupLabel htmlFor="password">
+            Password
+            {errors.password?.type === "required" && (
+              <ErrorMessage>Password is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
           <InputField
-            type="text"
-            name="password"
             id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-            value={details.password}
+            type="password"
+            {...register("password", { required: true })}
           />
         </FormGroup>
-        <InputButton type="submit" value="Sign Up" />
+        <InputButton type="submit" value="Sign up" />
       </FormInner>
     </FormStyle>
   );
 }
 
-export default LoginForm;
+export default SignupForm;
