@@ -1,5 +1,5 @@
 import pic from "../../images/about/manage.png";
-import Name from "../../images/about/profilepic.jfif";
+import Name from "../../images/about/profilepic.jpeg";
 // import Kevin from "../../images/about/kPic.jpg";
 // import Niharika from "../../images/about/nPic.jpg";
 import PublicLayout from "./../../Layout/Public";
