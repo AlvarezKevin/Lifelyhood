@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.views.generic import TemplateView
-from apps.accounts.urls import accounts_urlpatterns
+# from apps.accounts.urls import accounts_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('.*',TemplateView.as_view(template_name='index.html')),
     path('',include('notes.urls')),
-    path('', include('user_calendar.urls'))
+    path('', include('user_calendar.urls')),
+    path('', include('apps.accounts.urls')),
+    re_path('.*',TemplateView.as_view(template_name='index.html')),
 ]
-urlpatterns += accounts_urlpatterns 
+# urlpatterns += accounts_urlpatterns 

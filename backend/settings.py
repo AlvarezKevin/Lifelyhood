@@ -93,7 +93,13 @@ CORS_ORIGIN_ALLOW_ALL = True
     'X-CSRFTOKEN',
 )"""
 CSRF_COOKIE_NAME = "csrftoken"
+CSRF_COOKIE_SECURE = True
 #CSRF_TRUSTED_ORIGINS = ['127.0.0.1:8000']
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
+
 
 TEMPLATES = [
     {
