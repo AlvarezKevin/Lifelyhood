@@ -1,68 +1,105 @@
-import { Link, useHistory } from "react-router-dom";
-import home from "../images/home.svg";
-import { useState } from "react";
-import LoginForm from "../components/Form/SignUpForm";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom"; // new import
+import { connect } from "react-redux"; // new import
+import PropTypes from "prop-types"; // new import
+import { Link } from "react-router-dom";
 import {
-  Home,
-  FlexHeader,
-  LogoNav,
-  FlexMain,
-  FlexArticle,
-  FlexFooter,
-} from "../styles/SignUpStyle";
+  Container,
+  Button,
+  Row,
+  Col,
+  Form,
+  FormControl
+} from "react-bootstrap";
 
-export default function Login() {
-  const adminUser = {
-    email: "admin@admin.com",
-    password: "admin123",
-  };
-  let history = useHistory();
+import { signupNewUser } from "../components/signup/SignupActions"; // new import
 
-  const [user, setUser] = useState({ email: "" });
-  const [error, setError] = useState("");
-  const Login = (details) => {
-    console.log(details);
-    if (
-      details.email === adminUser.email &&
-      details.password === adminUser.password
-    ) {
-      console.log("Logged in");
-      setUser({
-        name: details.name,
-        email: details.email,
-      });
-    } else {
-      setError("Invalid Email or Password.");
-    }
+class Signup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+  }
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
-  // const Logout = () => {
-  //   console.log("Logout");
-  //   setUser({ email: "" });
-  // };
+  // update function to call the action
+  onSignupClick = () => {
+    const userData = {
+      username: this.state.username,
+      password: this.state.password
+    };
+    this.props.signupNewUser(userData); // <-- signup new user request
+  };
 
-  return (
-    <>
-      <Home>
-        <FlexHeader>
-          <Link to="/">
-            <LogoNav src={home} alt="logo" />
-          </Link>
-        </FlexHeader>
-        <FlexMain>
-          <FlexArticle>
-            {user.email !== "" ? (
-              history.push("/profile")
-            ) : (
-              <LoginForm Login={Login} error={error} />
-            )}
-          </FlexArticle>
-        </FlexMain>
-        <FlexFooter>
-          By clicking “Sign Up” above, you acknowledge that you have read and
-          understood, and agree to Lifelyhood's Terms & Conditions.
-        </FlexFooter>
-      </Home>
-    </>
-  );
+  render() {
+    return (
+      <Container>
+        <Row>
+          <Col md="4">
+            <h1>Sign up</h1>
+            <Form>
+              <Form.Group controlId="usernameId">
+                <Form.Label>User name</Form.Label>
+                <Form.Control
+                  isInvalid={this.props.createUser.usernameError}
+                  type="text"
+                  name="username"
+                  placeholder="Enter user name"
+                  value={this.state.username}
+                  onChange={this.onChange}
+                />
+                <FormControl.Feedback type="invalid">
+                  {this.props.createUser.usernameError}
+                </FormControl.Feedback>
+              </Form.Group>
+
+              <Form.Group controlId="passwordId">
+                <Form.Label>Your password</Form.Label>
+                <Form.Control
+                  isInvalid={this.props.createUser.passwordError}
+                  type="password"
+                  name="password"
+                  placeholder="Enter password"
+                  value={this.password}
+                  onChange={this.onChange}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {this.props.createUser.passwordError}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Form>
+            <Button color="primary" onClick={this.onSignupClick}>
+              Sign up
+            </Button>
+            <p className="mt-2">
+              Already have account? <Link to="/login">Login</Link>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
 }
+
+// connect action and reducer
+// replace 
+// export default Signup;
+// with code below:
+
+Signup.propTypes = {
+  signupNewUser: PropTypes.func.isRequired,
+  createUser: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  createUser: state.createUser
+});
+
+export default connect(mapStateToProps, {
+  signupNewUser
+})(withRouter(Signup));
+

@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import Root from "./Root"; 
 import Home from "./pages";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -12,13 +14,15 @@ import Schoolspace from "./pages/schoolspace";
 import Personalspace from "./pages/personalspace";
 import textEditor from "./pages/textEditor";
 import axios from 'axios';
-
+axios.defaults.baseURL = "http://127.0.0.1:8000";
+//axios.defaults.headers.common = {headers: {'X-CSRFToken': csrftoken}}
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 function App() {
   return (
-    <Router>
+    <Root>
+      <ToastContainer hideProgressBar={true} newestOnTop={true} />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
@@ -31,7 +35,7 @@ function App() {
         <Route path="/personal" component={Personalspace} />
         <Route path="/editor" component={textEditor} />
       </Switch>
-    </Router>
+    </Root>
   );
 }
 
