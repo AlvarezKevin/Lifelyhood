@@ -15,7 +15,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  max-width: 40vh;
+  width: 100%;
 }
 #info {
   color: rgba(131, 123, 123, 1);
@@ -32,21 +33,24 @@ body {
   position: relative;
   min-height: 100vh;
 }
-
-#creator-profile li {
-  width: 225px;
+.creator-profile {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.creator-profile li {
+  /* max width: 225px; */
   display: inline-block;
+  flex: 1 1;
+  min-width: 260px;
 }
-#creator-profile li p {
-  margin: 10px 0 20px 0;
-}
-
-footer {
-  color: white;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2.5rem;
+.creator-profile img {
+  display: flex;
   width: 100%;
-  background-color: rgb(36, 65, 9);
+  object-fit: cover;
+}
+.creator-profile li p {
+  margin: 10px 0 20px 0;
+  font-weight: 700;
+  font-size: 1.2rem;
 }

@@ -3,10 +3,16 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./Utils/styles/global";
+import theme from "./Utils/styles/theme";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+      <GlobalStyles />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

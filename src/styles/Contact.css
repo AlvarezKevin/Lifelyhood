@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 }
 
-footer {
+.footer {
   color: white;
   position: absolute;
   left: 0;
