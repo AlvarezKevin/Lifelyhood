@@ -61,3 +61,8 @@ export const ButtonStyle = styled.input`
   color: blue;
   background-color: black;
 `;
+
+export const ErrorMessage = styled.div`
+  color: red;
+  font-weight: bold;
+`;

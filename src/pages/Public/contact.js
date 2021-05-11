@@ -5,7 +5,7 @@ import PublicLayout from "./../../Layout/Public";
 export default function Login() {
   return (
     <PublicLayout>
-      <div className="content-wrap">
+      <div className="contact-page content-wrap">
         <div className="heading">
           <h1>
             <b>Contact Us</b>

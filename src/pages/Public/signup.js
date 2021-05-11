@@ -12,7 +12,7 @@ export default function Login() {
   let history = useHistory();
 
   const [error, setError] = useState("");
-  const onSignup = (data) => {
+  const submitHandler = (data) => {
     try {
     } catch (err) {
       setError("There is something wrong");
@@ -27,7 +27,7 @@ export default function Login() {
     <PublicLayout>
       <FlexMain>
         <FlexArticle>
-          <SignupForm onSubmitData={onSignup} />
+          <SignupForm onSubmitData={submitHandler} />
         </FlexArticle>
       </FlexMain>
       <FlexFooter>

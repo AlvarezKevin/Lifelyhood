@@ -1,8 +1,3 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-}
 .container {
   text-align: left;
 }
@@ -25,4 +20,8 @@ body {
   height: 2.5rem;
   width: 100%;
   background-color: rgba(178, 194, 163, 1);
+}
+
+.contact-page {
+  font-size: large;
 }
