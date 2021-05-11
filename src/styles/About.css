@@ -1,8 +1,3 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-}
 .contain {
   text-align: center;
   padding: 0 7.5vw;
@@ -47,7 +42,6 @@ body {
 .creator-profile img {
   display: flex;
   width: 100%;
-  object-fit: cover;
 }
 .creator-profile li p {
   margin: 10px 0 20px 0;

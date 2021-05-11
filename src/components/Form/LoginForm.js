@@ -16,12 +16,8 @@ function LoginForm({ onSubmitData, error }) {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const submitHandler = (data) => {
-    console.log(`data`, data);
-    onSubmitData(data);
-  };
   return (
-    <FormStyle onSubmit={handleSubmit(submitHandler)}>
+    <FormStyle onSubmit={handleSubmit(onSubmitData)}>
       <FormInner>
         <FormGroup>
           <FormGroupLabel htmlFor="email">

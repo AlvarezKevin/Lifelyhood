@@ -1,12 +1,12 @@
 import React from "react";
-import jobapp from "../images/work/jobapps.svg";
-import meetings from "../images/work/meetings.svg";
-import ledger from "../images/work/ledger.svg";
-import presentations from "../images/work/presentations.svg";
-import tasks from "../images/work/tasks.svg";
-import add from "../images/work/add.svg";
-import UserInfo from "../components/UserInfo";
-import ProfileNav from "../components/ProfileNav";
+import jobapp from "../../images/work/jobapps.svg";
+import meetings from "../../images/work/meetings.svg";
+import ledger from "../../images/work/ledger.svg";
+import presentations from "../../images/work/presentations.svg";
+import tasks from "../../images/work/tasks.svg";
+import add from "../../images/work/add.svg";
+import UserInfo from "../../components/UserInfo";
+import ProfileNav from "../../components/ProfileNav";
 import { Link } from "react-router-dom";
 
 const Workspace = () => {
@@ -16,7 +16,6 @@ const Workspace = () => {
       <div className="main">
         <UserInfo />
         <div className="pages">
-
           <div className="page-box">
             <div className="page-title">
               <Link className="page-img">
@@ -70,7 +69,6 @@ const Workspace = () => {
               <h5>Add Page</h5>
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export const InputButton = styled.input`
   margin-top: 1rem;
   border-radius: 6px;
   background-color: #b2c2a3;
-  font-size: 2rem;
+  font-size: 1.8rem;
 `;
 
 export const InputField = styled.input`
@@ -28,7 +28,7 @@ export const InputField = styled.input`
   margin-bottom: 1rem;
   border-radius: 6px;
   background-color: #dfe3db;
-  font-size: 2rem;
+  font-size: 1.8rem;
   outline: none;
 `;
 

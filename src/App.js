@@ -6,15 +6,13 @@ import About from "./pages/Public/about";
 import Contact from "./pages/Public/contact";
 import SignUp from "./pages/Public/signup";
 import Login from "./pages/Public/login";
-import Profile from "./pages/profile";
-import Workspace from "./pages/workspace";
-import Schoolspace from "./pages/schoolspace";
-import Personalspace from "./pages/personalspace";
-import textEditor from "./pages/textEditor";
+import Profile from "./pages/Private/profile";
+import Workspace from "./pages/Private/workspace";
+import Schoolspace from "./pages/Private/schoolspace";
+import Personalspace from "./pages/Private/personalspace";
+import textEditor from "./pages/Private/textEditor";
 import axios from "axios";
-import { ToastContainer } from "react-toastify";
 
-<ToastContainer hideProgressBar={true} newestOnTop={true} />;
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 

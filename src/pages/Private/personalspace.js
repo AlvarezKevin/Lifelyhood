@@ -1,13 +1,13 @@
 import React from "react";
-import fitness from "../images/personal/fitness.svg";
-import health from "../images/personal/health.svg";
-import grocery from "../images/personal/grocery.svg";
-import journal from "../images/personal/journal.svg";
-import travel from "../images/personal/travel.svg";
-import add from "../images/personal/add.svg";
-import ProfileNav from "../components/ProfileNav";
-import UserInfo from "../components/UserInfo";
-import "../styles/Pages.css";
+import fitness from "../../images/personal/fitness.svg";
+import health from "../../images/personal/health.svg";
+import grocery from "../../images/personal/grocery.svg";
+import journal from "../../images/personal/journal.svg";
+import travel from "../../images/personal/travel.svg";
+import add from "../../images/personal/add.svg";
+import ProfileNav from "../../components/ProfileNav";
+import UserInfo from "../../components/UserInfo";
+import "../../styles/Pages.css";
 import { Link } from "react-router-dom";
 
 const Personalspace = () => {

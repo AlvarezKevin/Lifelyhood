@@ -1,12 +1,12 @@
 import React from "react";
-import notes from "../images/school/notes.svg";
-import schedule from "../images/school/schedule.svg";
-import clubs from "../images/school/clubs.svg";
-import exams from "../images/school/exams.svg";
-import assign from "../images/school/assign.svg";
-import add from "../images/school/add.svg";
-import UserInfo from "../components/UserInfo";
-import ProfileNav from "../components/ProfileNav";
+import notes from "../../images/school/notes.svg";
+import schedule from "../../images/school/schedule.svg";
+import clubs from "../../images/school/clubs.svg";
+import exams from "../../images/school/exams.svg";
+import assign from "../../images/school/assign.svg";
+import add from "../../images/school/add.svg";
+import UserInfo from "../../components/UserInfo";
+import ProfileNav from "../../components/ProfileNav";
 import { Link } from "react-router-dom";
 
 const Schoolspace = () => {
@@ -16,7 +16,6 @@ const Schoolspace = () => {
       <div className="main">
         <UserInfo />
         <div className="pages">
-
           <div className="page-box">
             <div className="page-title">
               <Link to="/editor" className="page-img">
@@ -70,7 +69,6 @@ const Schoolspace = () => {
               <h5>Add Page</h5>
             </div>
           </div>
-
         </div>
       </div>
     </div>
