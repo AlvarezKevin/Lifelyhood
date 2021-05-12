@@ -28,7 +28,7 @@ const Personalspace = () => {
 
           <div className="page-box">
             <div className="page-title">
-              <Link className="page-img">
+              <Link to="/editor" className="page-img">
                 <img src={health} alt="Health" />
               </Link>
               <h5>Health</h5>
@@ -46,7 +46,7 @@ const Personalspace = () => {
 
           <div className="page-box">
             <div className="page-title">
-              <Link className="page-img">
+              <Link to="/editor" className="page-img">
                 <img src={journal} alt="Journal" />
               </Link>
               <h5>Journal</h5>
@@ -64,7 +64,7 @@ const Personalspace = () => {
 
           <div className="page-box">
             <div className="page-title">
-              <Link className="page-img">
+              <Link to="/editor" className="page-img">
                 <img src={add} alt="Add Page" />
               </Link>
               <h5>Add Page</h5>
