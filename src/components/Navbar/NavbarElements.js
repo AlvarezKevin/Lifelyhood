@@ -5,27 +5,78 @@ export const Nav = styled.nav`
   background: #fff;
   height: 80px;
   display: flex;
-  justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  padding-left: 30rem;
   z-index: 10;
+  padding: 0px 1rem;
+  margin-bottom: 1rem;
 `;
 
 export const NavLink = styled(Link)`
   color: #000;
   display: flex;
-  float: left;
   text-align: center;
+  align-items: center;
   text-decoration: none;
-  font-size: 29px;
-  padding: 0 1rem;
+  font-size: 1.8rem;
+  padding: 0px 1rem;
   height: 100%;
   cursor: pointer;
+
   &.active {
-    color: #15cdfc;
+    color: #a7c38c;
   }
 `;
 
 export const NavMenu = styled.div`
-  float: right;
+  display: flex;
+  margin-left: auto;
+
+  @media ${(props) => props.theme.mediaQueries.medium} {
+    display: ${(props) => (props.isNavOpen ? "unset" : "none")};
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+    position: absolute;
+    right: 8px;
+    top: 5%;
+    box-shadow: 0px 12px 2rem 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #fff;
+  }
+`;
+export const VerticleLine = styled.div`
+  height: 40%;
+  width: 3px;
+  margin: auto;
+  background-color: #4a4a4a;
+`;
+export const HumburgerBtn = styled.div`
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: 4%;
+  margin-top: 2%;
+  display: none;
+
+  & span {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    background-color: #4a4a4a;
+  }
+
+  @media ${(props) => props.theme.mediaQueries.medium} {
+    display: flex;
+  }
+`;
+export const LogoBtn = styled.div`
+  /* border: 1px solid; */
+  display: flex;
+  img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
 `;

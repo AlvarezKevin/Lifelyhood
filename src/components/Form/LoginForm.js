@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import {
   InputButton,
   InputField,
@@ -7,38 +8,41 @@ import {
   FormGroup,
   FormGroupLabel,
   ErrorMessage,
-} from "../../styles/LoginStyle";
+} from "./style";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
-  const submitHandler = (e) => {
-    e.preventDefault();
-    Login(details);
-  };
+function LoginForm({ onSubmitData, error }) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   return (
-    <FormStyle onSubmit={submitHandler}>
+    <FormStyle onSubmit={handleSubmit(onSubmitData)}>
       <FormInner>
-        {error !== "" ? <ErrorMessage>{error}</ErrorMessage> : ""}
         <FormGroup>
-          <FormGroupLabel htmlFor="email">Email</FormGroupLabel>
+          <FormGroupLabel htmlFor="email">
+            Email
+            {errors.email?.type === "required" && (
+              <ErrorMessage>Email is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
           <InputField
-            type="text"
-            name="email"
+            type="email"
             id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
+            {...register("email", { required: true })}
           />
         </FormGroup>
         <FormGroup>
-          <FormGroupLabel htmlFor="password">Password</FormGroupLabel>
+          <FormGroupLabel htmlFor="password">
+            Password
+            {errors.password?.type === "required" && (
+              <ErrorMessage>Password is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
           <InputField
-            type="text"
-            name="password"
             id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-            value={details.password}
+            type="password"
+            {...register("password", { required: true })}
           />
         </FormGroup>
         <InputButton type="submit" value="Log in" />

@@ -9,6 +9,7 @@ export const Home = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  flex: 1 1 100%;
 `;
 
 export const FlexHeader = styled.header`
@@ -32,21 +33,24 @@ export const FlexMain = styled.main`
   padding-bottom: 3%;
 `;
 
-export const FlexArticle = styled.article` {
+export const FlexArticle = styled.article`
   background-color: white;
   flex: 1 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  `;
+`;
 
 export const FlexFooter = styled.footer`
   background-color: white;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 20rem;
-  font-size: 1.2rem;
+
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  max-width: 620px;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: 0;
 `;
 
 export const ButtonStyle = styled.input`
@@ -54,54 +58,8 @@ export const ButtonStyle = styled.input`
   height: 30px;
   border: none;
   border-radius: 17px;
-  padding-left: 7px;
   color: blue;
   background-color: black;
-`;
-
-export const InputButton = styled.input`
-  border-style: solid;
-  width: 26rem;
-  padding: 0.2rem;
-  margin-top: 1rem;
-  border-radius: 15px;
-  background-color: #b2c2a3;
-  font-size: 2rem;
-`;
-
-export const InputField = styled.input`
-  border-style: solid;
-  width: 26rem;
-  padding: 0.2rem;
-  margin-bottom: 1rem;
-  border-radius: 15px;
-  background-color: #dfe3db;
-  font-size: 2rem;
-  outline: none;
-`;
-
-export const FormStyle = styled.form`
-  display: block;
-  position: relative;
-  margin-top: 5vh;
-`;
-
-export const FormInner = styled.div`
-  position: relative;
-  display: block;
-  background-color: #fff;
-  padding: 30px;
-`;
-
-export const FormGroup = styled.div`
-  width: 300px;
-  margin-bottom: 1vh;
-`;
-
-export const FormGroupLabel = styled.label`
-  color: black,
-  font-size: 1.5rem;
-  float: left
 `;
 
 export const ErrorMessage = styled.div`

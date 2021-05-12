@@ -36,7 +36,6 @@
     bottom: 0;
     right: 50%;
     height:4px;
-    background-color: #A3B7C2;
     transition: .5s;
 }
     
@@ -47,6 +46,29 @@
     left: 50%;
     width: 90px;
     height:4px;
+}
+
+.purple:after{
+    background-color: #BAA3C2;
+}
+    
+.purple:before{
+    background-color: #BAA3C2;
+}
+
+.red:after{
+    background-color: #C2A3A3;
+}
+    
+.red:before{
+    background-color: #C2A3A3;
+}
+
+.blue:after{
+    background-color: #A3B7C2;
+}
+    
+.blue:before{
     background-color: #A3B7C2;
 }
 

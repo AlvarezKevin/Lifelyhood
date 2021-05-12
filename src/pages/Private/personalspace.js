@@ -1,25 +1,24 @@
 import React from "react";
-import fitness from "../images/personal/fitness.svg";
-import health from "../images/personal/health.svg";
-import grocery from "../images/personal/grocery.svg";
-import journal from "../images/personal/journal.svg";
-import travel from "../images/personal/travel.svg";
-import add from "../images/personal/add.svg";
-import ProfileNav from "../components/ProfileNav";
-import UserInfo from "../components/UserInfo";
-import "../styles/Pages.css"
+import fitness from "../../images/personal/fitness.svg";
+import health from "../../images/personal/health.svg";
+import grocery from "../../images/personal/grocery.svg";
+import journal from "../../images/personal/journal.svg";
+import travel from "../../images/personal/travel.svg";
+import add from "../../images/personal/add.svg";
+import ProfileNav from "../../components/ProfileNav";
+import UserInfo from "../../components/UserInfo";
+import "../../styles/Pages.css";
 import { Link } from "react-router-dom";
 
-const Personalspace = () => {    
+const Personalspace = () => {
   return (
     <div className="profile">
       <ProfileNav />
       <div className="main">
         <UserInfo />
         <div className="pages">
-          
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title blue">
               <Link className="page-img">
                 <img src={fitness} alt="Fitness" />
               </Link>
@@ -28,8 +27,8 @@ const Personalspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title blue">
+              <Link to="/editor" className="page-img">
                 <img src={health} alt="Health" />
               </Link>
               <h5>Health</h5>
@@ -37,7 +36,7 @@ const Personalspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title blue">
               <Link className="page-img">
                 <img src={grocery} alt="Grocery" />
               </Link>
@@ -46,8 +45,8 @@ const Personalspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title blue">
+              <Link to="/editor" className="page-img">
                 <img src={journal} alt="Journal" />
               </Link>
               <h5>Journal</h5>
@@ -55,7 +54,7 @@ const Personalspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title blue">
               <Link className="page-img">
                 <img src={travel} alt="Travel" />
               </Link>
@@ -64,14 +63,13 @@ const Personalspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title blue">
+              <Link to="/editor" className="page-img">
                 <img src={add} alt="Add Page" />
               </Link>
               <h5>Add Page</h5>
             </div>
           </div>
-    
         </div>
       </div>
     </div>
