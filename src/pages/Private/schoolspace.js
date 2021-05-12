@@ -17,7 +17,7 @@ const Schoolspace = () => {
         <UserInfo />
         <div className="pages">
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link to="/editor" className="page-img">
                 <img src={notes} alt="Notes" />
               </Link>
@@ -26,7 +26,7 @@ const Schoolspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link className="page-img">
                 <img src={schedule} alt="Schedule" />
               </Link>
@@ -35,7 +35,7 @@ const Schoolspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link className="page-img">
                 <img src={clubs} alt="Clubs" />
               </Link>
@@ -44,7 +44,7 @@ const Schoolspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link className="page-img">
                 <img src={exams} alt="Exams" />
               </Link>
@@ -53,7 +53,7 @@ const Schoolspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link className="page-img">
                 <img src={assign} alt="Assignments" />
               </Link>
@@ -62,7 +62,7 @@ const Schoolspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title red">
               <Link to="/editor" className="page-img">
                 <img src={add} alt="Add Page" />
               </Link>
