@@ -17,7 +17,7 @@ const Workspace = () => {
         <UserInfo />
         <div className="pages">
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title purple">
               <Link className="page-img">
                 <img src={jobapp} alt="Job Applications" />
               </Link>
@@ -26,7 +26,7 @@ const Workspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title purple">
               <Link className="page-img">
                 <img src={tasks} alt="Tasks" />
               </Link>
@@ -35,7 +35,7 @@ const Workspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
+            <div className="page-title purple">
               <Link className="page-img">
                 <img src={meetings} alt="Meetings" />
               </Link>
@@ -44,8 +44,8 @@ const Workspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title purple">
+              <Link to="/editor" className="page-img">
                 <img src={ledger} alt="Ledger" />
               </Link>
               <h5>Ledger</h5>
@@ -53,8 +53,8 @@ const Workspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title purple">
+              <Link to="/editor" className="page-img">
                 <img src={presentations} alt="Presentations" />
               </Link>
               <h5>Presentations</h5>
@@ -62,8 +62,8 @@ const Workspace = () => {
           </div>
 
           <div className="page-box">
-            <div className="page-title">
-              <Link className="page-img">
+            <div className="page-title purple">
+              <Link to="/editor" className="page-img">
                 <img src={add} alt="Add Page" />
               </Link>
               <h5>Add Page</h5>
