@@ -63,7 +63,7 @@ const Schoolspace = () => {
 
           <div className="page-box">
             <div className="page-title">
-              <Link className="page-img">
+              <Link to="/editor" className="page-img">
                 <img src={add} alt="Add Page" />
               </Link>
               <h5>Add Page</h5>
