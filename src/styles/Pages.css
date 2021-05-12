@@ -36,7 +36,6 @@
     bottom: 0;
     right: 50%;
     height:4px;
-    background-color: #A3B7C2;
     transition: .5s;
 }
     
@@ -47,7 +46,14 @@
     left: 50%;
     width: 90px;
     height:4px;
-    background-color: #A3B7C2;
+}
+
+.purple:after{
+    background-color: #BAA3C2;
+}
+    
+.purple:before{
+    background-color: #BAA3C2;
 }
 
 .page-img{
