@@ -4,6 +4,7 @@ html {
 .pg {
   height: 100vh;
   background-color: rgba(223, 227, 219, 1);
+  padding-left: 70px;
 }
 button,
 select {

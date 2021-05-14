@@ -27,6 +27,7 @@ export default Home;
 const App = styled.div`
   text-align: center;
   text-decoration: none;
+  width: 100%;
 `;
 const AppLogo = styled.img`
   height: 40vmin;

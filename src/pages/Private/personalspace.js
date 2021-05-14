@@ -5,74 +5,26 @@ import grocery from "../../images/personal/grocery.svg";
 import journal from "../../images/personal/journal.svg";
 import travel from "../../images/personal/travel.svg";
 import add from "../../images/personal/add.svg";
-import ProfileNav from "../../components/ProfileNav";
+
 import UserInfo from "../../components/UserInfo";
 import "../../styles/Pages.css";
-import { Link } from "react-router-dom";
-
+import SpaceItem from "./../../components/SpaceItem";
+import PrivateLayout from "./../../Layout/Private";
 const Personalspace = () => {
   return (
-    <div className="profile">
-      <ProfileNav />
+    <PrivateLayout>
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link className="page-img">
-                <img src={fitness} alt="Fitness" />
-              </Link>
-              <h5>Fitness</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link to="/editor" className="page-img">
-                <img src={health} alt="Health" />
-              </Link>
-              <h5>Health</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link className="page-img">
-                <img src={grocery} alt="Grocery" />
-              </Link>
-              <h5>Grocery</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link to="/editor" className="page-img">
-                <img src={journal} alt="Journal" />
-              </Link>
-              <h5>Journal</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link className="page-img">
-                <img src={travel} alt="Travel" />
-              </Link>
-              <h5>Travel</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title blue">
-              <Link to="/editor" className="page-img">
-                <img src={add} alt="Add Page" />
-              </Link>
-              <h5>Add Page</h5>
-            </div>
-          </div>
+          <SpaceItem to="/fitness-space" title="Fitness" imgSrc={fitness} />
+          <SpaceItem to="/health-space" title="Health" imgSrc={health} />
+          <SpaceItem to="/grocery-space" title="Grocery" imgSrc={grocery} />
+          <SpaceItem to="/journal-space" title="Journal" imgSrc={journal} />
+          <SpaceItem to="/travel-space" title="Travel" imgSrc={travel} />
+          <SpaceItem to="/add-space" title="Add Page" imgSrc={add} />
         </div>
       </div>
-    </div>
+    </PrivateLayout>
   );
 };
 
