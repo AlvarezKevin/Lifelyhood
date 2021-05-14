@@ -11,6 +11,7 @@ import Workspace from "./pages/Private/workspace";
 import Schoolspace from "./pages/Private/schoolspace";
 import Personalspace from "./pages/Private/personalspace";
 import textEditor from "./pages/Private/textEditor";
+import Calendar from "./pages/Private/calendar";
 import axios from "axios";
 
 axios.defaults.xsrfCookieName = "csrftoken";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/school" component={Schoolspace} />
         <Route path="/personal" component={Personalspace} />
         <Route path="/editor" component={textEditor} />
+        <Route path="/calendar" component={Calendar} />
       </Switch>
     </Router>
   );

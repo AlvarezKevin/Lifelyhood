@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom'
 
 const ProfileNav = () => {
   let location = useLocation();
-  let space1, space2;
+  let space1, space2, space3;
   if (location.pathname ==="/work") {
     space1 = <NavLink to="/school"><img src={red} alt="nav_school" /></NavLink>;
     space2 = <NavLink to="/personal"><img src={blue} alt="nav_personal" /></NavLink>;
@@ -20,16 +20,22 @@ const ProfileNav = () => {
   } else if (location.pathname ==="/personal") {
     space1 = <NavLink to="/school"><img src={red} alt="nav_school" /></NavLink>;
     space2 = <NavLink to="/work"><img src={purple} alt="nav_work" /></NavLink>;
+  } else if (location.pathname ==="/calendar") {
+    space1 = <NavLink to="/school"><img src={red} alt="nav_school" /></NavLink>;
+    space2 = <NavLink to="/personal"><img src={blue} alt="nav_personal" /></NavLink>;
+    space3 = <NavLink to="/work"><img src={purple} alt="nav_work" /></NavLink>;
   }
+
 
   return (
     <>
         <Nav>
             <NavLink to="/"><img src={logout} alt="log out" /></NavLink>
             <NavLink to="/"><img src={settings} alt="settings" /></NavLink>
-            <NavLink to="/"><img src={calender} alt="calender" /></NavLink>
+            <NavLink to="/calendar"><img src={calender} alt="calender" /></NavLink>
             {space1}
             {space2}
+            {space3}
         </Nav>
     </>
   );
