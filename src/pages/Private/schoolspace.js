@@ -5,73 +5,58 @@ import clubs from "../../images/school/clubs.svg";
 import exams from "../../images/school/exams.svg";
 import assign from "../../images/school/assign.svg";
 import add from "../../images/school/add.svg";
-import UserInfo from "../../components/UserInfo";
 import ProfileNav from "../../components/ProfileNav";
-import { Link } from "react-router-dom";
-
+import UserInfo from "../../components/UserInfo";
+import "../../styles/Pages.css";
+import SpaceItem from "./../../components/SpaceItem";
+import PrivateLayout from "./../../Layout/Private";
 const Schoolspace = () => {
+  const color = "red";
   return (
-    <div className="profile">
+    <PrivateLayout>
       <ProfileNav />
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <div className="page-box">
-            <div className="page-title red">
-              <Link to="/editor" className="page-img">
-                <img src={notes} alt="Notes" />
-              </Link>
-              <h5>Notes</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title red">
-              <Link className="page-img">
-                <img src={schedule} alt="Schedule" />
-              </Link>
-              <h5>Schedule</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title red">
-              <Link className="page-img">
-                <img src={clubs} alt="Clubs" />
-              </Link>
-              <h5>Clubs</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title red">
-              <Link className="page-img">
-                <img src={exams} alt="Exams" />
-              </Link>
-              <h5>Exams</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title red">
-              <Link className="page-img">
-                <img src={assign} alt="Assignments" />
-              </Link>
-              <h5>Assignments</h5>
-            </div>
-          </div>
-
-          <div className="page-box">
-            <div className="page-title red">
-              <Link to="/editor" className="page-img">
-                <img src={add} alt="Add Page" />
-              </Link>
-              <h5>Add Page</h5>
-            </div>
-          </div>
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={notes}
+            title="Notes"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/schedule"
+            imgSrc={schedule}
+            title="Schedule"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/clubs"
+            imgSrc={clubs}
+            title="Clubs"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/exams"
+            imgSrc={exams}
+            title="Exams"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/assignments"
+            imgSrc={assign}
+            title="Assignments"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={add}
+            title="Add Page"
+          />
         </div>
       </div>
-    </div>
+    </PrivateLayout>
   );
 };
 

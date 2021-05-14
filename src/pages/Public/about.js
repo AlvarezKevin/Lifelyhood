@@ -1,13 +1,16 @@
 import pic from "../../images/about/manage.png";
-import Name from "../../images/about/profilepic.jpeg";
-// import Kevin from "../../images/about/kPic.jpg";
-// import Niharika from "../../images/about/nPic.jpg";
+import Mike from "../../images/about/mikePic.jpeg";
+import Kevin from "../../images/about/kPic.jpg";
+import Niharika from "../../images/about/nPic.jpg";
+import Myriam from "../../images/about/mPic.jpg";
+import Kazi from "../../images/about/kaziPic.jpg";
+import Hammad from "../../images/about/hammedPic.jpg";
 import PublicLayout from "./../../Layout/Public";
 import "../../styles/About.css";
 import { FlexFooter } from "./AuthStyle";
 export default function Login() {
   return (
-    <PublicLayout>
+    <PublicLayout isVisibleOnPrivate={true}>
       <div className="">
         <div className="content-wrap">
           <div className="contain">
@@ -31,12 +34,12 @@ export default function Login() {
               <h3>Frontend</h3>
               <ul className="creator-profile">
                 <li>
-                  <img src={Name} height="225" alt="Name" title="Name" />
+                  <img src={Kazi} height="225" alt="Name" title="Name" />
                   <p>Kazi Siam</p>
                 </li>
                 <li>
                   <img
-                    src={Name}
+                    src={Myriam}
                     max-width="100%"
                     height="225"
                     alt="Name"
@@ -46,7 +49,7 @@ export default function Login() {
                 </li>
                 <li>
                   <img
-                    src={Name}
+                    src={Niharika}
                     max-width="100%"
                     height="225"
                     alt="Name"
@@ -58,12 +61,12 @@ export default function Login() {
               <h3>Backend</h3>
               <ul className="creator-profile">
                 <li>
-                  <img src={Name} height="225" alt="Name" title="Name" />
+                  <img src={Hammad} height="225" alt="Name" title="Name" />
                   <p>Hammad</p>
                 </li>
                 <li>
                   <img
-                    src={Name}
+                    src={Kevin}
                     max-width="100%"
                     height="225"
                     alt="Name"
@@ -72,7 +75,7 @@ export default function Login() {
                   <p>Kevin Alvarez</p>
                 </li>
                 <li>
-                  <img src={Name} height="225" alt="Name" title="Name" />
+                  <img src={Mike} height="225" alt="Name" title="Name" />
                   <p>Mike Neri</p>
                 </li>
               </ul>

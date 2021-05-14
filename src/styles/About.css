@@ -35,13 +35,15 @@
 }
 .creator-profile li {
   /* max width: 225px; */
-  display: inline-block;
+  display: inline-flex;
   flex: 1 1;
-  min-width: 260px;
+  /* min-width: 260px; */
+  flex-direction: column;
 }
 .creator-profile img {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
+  object-fit: contain;
 }
 .creator-profile li p {
   margin: 10px 0 20px 0;

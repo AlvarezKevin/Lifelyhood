@@ -1,16 +1,13 @@
 import React, { useState, useRef } from "react";
 import { NavLink as Link } from "react-router-dom";
-import {
-  Nav,
-  NavLink,
-  NavMenu,
-  VerticleLine,
-  HumburgerBtn,
-  LogoBtn,
-} from "./NavbarElements";
+import { Nav, NavMenu, HumburgerBtn, LogoBtn } from "./NavbarElements";
 import useOnClickOutside from "../../Hooks/useOnClickOutside";
 import home from "../../images/home.svg";
+import { useAuthCtx } from "../../Hooks/useAuthContext";
+import PrivateMenus from "./PrivateMenus";
+import PublicMenus from "./PublicMenus";
 const Navbar = () => {
+  const { isAuthenticated, logout } = useAuthCtx();
   const navMenuRef = useRef();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -31,19 +28,7 @@ const Navbar = () => {
           <span />
         </HumburgerBtn>
         <NavMenu isNavOpen={isNavOpen} ref={navMenuRef}>
-          <NavLink style={{ textDecoration: "none" }} to="/about">
-            About
-          </NavLink>
-          <NavLink style={{ textDecoration: "none" }} to="/contact-us">
-            Contact Us
-          </NavLink>
-          <NavLink style={{ textDecoration: "none" }} to="/login">
-            Log in
-          </NavLink>
-          <VerticleLine />
-          <NavLink style={{ textDecoration: "none" }} to="/sign-up">
-            Sign Up
-          </NavLink>
+          {isAuthenticated ? <PrivateMenus logout={logout} /> : <PublicMenus />}
         </NavMenu>
       </Nav>
     </>
