@@ -3,18 +3,16 @@ import { useHistory } from "react-router";
 import { useAuthCtx } from "../Hooks/useAuthContext";
 import Navbar from "./../components/Navbar";
 
-const PublicLayout = ({ children }) => {
+const PublicLayout = ({ children, isVisibleOnPrivate = false }) => {
   const { isAuthenticated } = useAuthCtx();
   const history = useHistory();
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isAuthenticated && !isVisibleOnPrivate) {
       history.push("/profile");
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, isVisibleOnPrivate, history]);
   return (
-    <div
-      style={{ minHeight: "100%", flexDirection: "column", display: "flex" }}
-    >
+    <div style={{ width: "100%", flexDirection: "column", display: "flex" }}>
       <Navbar />
       {children}
     </div>

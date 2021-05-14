@@ -1,4 +1,3 @@
-import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 import LoginForm from "../../components/Form/LoginForm";
 import PublicLayout from "../../Layout/Public";
@@ -11,7 +10,6 @@ const adminUser = {
 };
 export default function Login() {
   const { setUserDetails } = useAuthCtx();
-  const history = useHistory();
 
   const [error, setError] = useState(null);
   const submitHandler = async (data) => {

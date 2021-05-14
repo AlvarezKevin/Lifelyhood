@@ -27,9 +27,7 @@ export default createGlobalStyle`
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-    ::selection {
-        background: var(--primary-lighter); /* WebKit/Blink Browsers */
-      }
+    
     body {
       font-family: 'Sora', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", '!default';
       margin: 0;

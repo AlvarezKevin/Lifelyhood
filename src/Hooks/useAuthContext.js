@@ -14,9 +14,14 @@ export const AuthCtxProvider = ({ children }) => {
     setUser(details);
   };
 
+  const logout = () => {
+    setUser(null);
+  };
   const isAuthenticated = !!user?.token;
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, setUserDetails }}>
+    <AuthContext.Provider
+      value={{ user, isAuthenticated, setUserDetails, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );

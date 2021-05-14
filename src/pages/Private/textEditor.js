@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "../../styles/textEditor.css";
 import Toolbar from "../../components/EditorToolbar/toolbar";
-
+import PrivateLayout from "./../../Layout/Private";
 class textEditor extends Component {
   render() {
     return (
-      <div className="pg">
-        <Toolbar />
-      </div>
+      <PrivateLayout>
+        <div className="pg">
+          <Toolbar />
+        </div>
+      </PrivateLayout>
     );
   }
 }

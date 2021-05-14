@@ -57,7 +57,8 @@ export const HumburgerBtn = styled.div`
   justify-content: space-around;
   margin-left: auto;
   margin-right: 4%;
-  margin-top: 2%;
+  margin-top: auto;
+  margin: auto 4% auto auto;
   display: none;
 
   & span {

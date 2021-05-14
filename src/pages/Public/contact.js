@@ -4,7 +4,7 @@ import { FlexFooter } from "./AuthStyle";
 import PublicLayout from "./../../Layout/Public";
 export default function Login() {
   return (
-    <PublicLayout>
+    <PublicLayout isVisibleOnPrivate={true}>
       <div className="contact-page content-wrap">
         <div className="heading">
           <h1>
