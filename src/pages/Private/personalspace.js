@@ -11,17 +11,48 @@ import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
 const Personalspace = () => {
+  const color = "blue";
   return (
     <PrivateLayout>
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <SpaceItem to="/fitness-space" title="Fitness" imgSrc={fitness} />
-          <SpaceItem to="/health-space" title="Health" imgSrc={health} />
-          <SpaceItem to="/grocery-space" title="Grocery" imgSrc={grocery} />
-          <SpaceItem to="/journal-space" title="Journal" imgSrc={journal} />
-          <SpaceItem to="/travel-space" title="Travel" imgSrc={travel} />
-          <SpaceItem to="/add-space" title="Add Page" imgSrc={add} />
+          <SpaceItem
+            colorClassName={color}
+            to="/fitness-space"
+            title="Fitness"
+            imgSrc={fitness}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            title="Health"
+            imgSrc={health}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/grocery-space"
+            title="Grocery"
+            imgSrc={grocery}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            title="Journal"
+            imgSrc={journal}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/travel-space"
+            title="Travel"
+            imgSrc={travel}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            title="Add Page"
+            imgSrc={add}
+          />
         </div>
       </div>
     </PrivateLayout>

@@ -11,22 +11,49 @@ import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
 const Workspace = () => {
+  const color = "purple";
   return (
     <PrivateLayout>
       <ProfileNav />
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <SpaceItem to="/jobapp" imgSrc={jobapp} title="Job Applications" />
-          <SpaceItem to="/tasks" imgSrc={tasks} title="Tasks" />
-          <SpaceItem to="/meetings" imgSrc={meetings} title="Meetings" />
-          <SpaceItem to="/ledger" imgSrc={ledger} title="Ledger" />
           <SpaceItem
-            to="/presentations"
+            colorClassName={color}
+            to="/jobapp"
+            imgSrc={jobapp}
+            title="Job Applications"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/tasks"
+            imgSrc={tasks}
+            title="Tasks"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/meetings"
+            imgSrc={meetings}
+            title="Meetings"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={ledger}
+            title="Ledger"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
             imgSrc={presentations}
             title="Presentations"
           />
-          <SpaceItem to="/add-page" imgSrc={add} title="Add Page" />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={add}
+            title="Add Page"
+          />
         </div>
       </div>
     </PrivateLayout>
