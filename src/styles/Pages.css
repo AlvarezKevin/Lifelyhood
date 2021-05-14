@@ -38,7 +38,6 @@
   bottom: 0;
   right: 50%;
   height: 4px;
-  background-color: #a3b7c2;
   transition: 0.5s;
 }
 
@@ -49,7 +48,6 @@
   left: 50%;
   width: 90px;
   height: 4px;
-  background-color: #a3b7c2;
 }
 
 .page-img {
@@ -69,6 +67,30 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.purple:after {
+  background-color: #baa3c2;
+}
+
+.purple:before {
+  background-color: #baa3c2;
+}
+
+.red:after {
+  background-color: #c2a3a3;
+}
+
+.red:before {
+  background-color: #c2a3a3;
+}
+
+.blue:after {
+  background-color: #a3b7c2;
+}
+
+.blue:before {
+  background-color: #a3b7c2;
 }
 
 @media screen and (max-width: 720px) {

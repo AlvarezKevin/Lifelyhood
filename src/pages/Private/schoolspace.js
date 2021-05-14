@@ -11,18 +11,49 @@ import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
 const Schoolspace = () => {
+  const color = "red";
   return (
     <PrivateLayout>
       <ProfileNav />
       <div className="main">
         <UserInfo />
         <div className="pages">
-          <SpaceItem to="/editor" imgSrc={notes} title="Notes" />
-          <SpaceItem to="/schedule" imgSrc={schedule} title="Schedule" />
-          <SpaceItem to="/clubs" imgSrc={clubs} title="Clubs" />
-          <SpaceItem to="/exams" imgSrc={exams} title="Exams" />
-          <SpaceItem to="/assignments" imgSrc={assign} title="Assignments" />
-          <SpaceItem to="/add-page" imgSrc={add} title="Add Page" />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={notes}
+            title="Notes"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/schedule"
+            imgSrc={schedule}
+            title="Schedule"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/clubs"
+            imgSrc={clubs}
+            title="Clubs"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/exams"
+            imgSrc={exams}
+            title="Exams"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/assignments"
+            imgSrc={assign}
+            title="Assignments"
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/editor"
+            imgSrc={add}
+            title="Add Page"
+          />
         </div>
       </div>
     </PrivateLayout>
