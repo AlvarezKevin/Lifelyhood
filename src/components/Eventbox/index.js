@@ -16,11 +16,11 @@ const ModalBackground = styled.div`
 
 const ModalWrapper = styled.div`
   width: 330px;
-  height: 550px;
+  height: 542px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr .2fr;
   position: relative;
   z-index: 10;
   border-radius: 10px;
@@ -32,16 +32,6 @@ const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 1.8;
-  color: #141414;
-  p {
-    margin-bottom: 1rem;
-  }
-  button {
-    padding: 10px 24px;
-    background: #141414;
-    color: #fff;
-    border: none;
-  }
 `;
 
 const CloseModalButton = styled(MdClose)`
@@ -52,7 +42,6 @@ const CloseModalButton = styled(MdClose)`
   width: 32px;
   height: 32px;
   padding: 0;
-  z-index: 10;
 `;
 
 const Eventbox = ({showEventbox, setShowEventbox}) => {
@@ -91,9 +80,7 @@ const Eventbox = ({showEventbox, setShowEventbox}) => {
                 <animated.div style={animation}>
                     <ModalWrapper showEventbox={showEventbox}>
                         <ModalContent>
-                            <AddEventForm onSubmitData={submitHandler}/>
-                            {/* <h1>hi</h1>
-                            <button>add</button> */}
+                            <AddEventForm showEventbox={showEventbox} setShowEventbox={setShowEventbox} onSubmitData={submitHandler}/>
                         </ModalContent>
                         <CloseModalButton aria-label="Close Modal" onClick={() => setShowEventbox (prev => !prev)} />
                     </ModalWrapper>

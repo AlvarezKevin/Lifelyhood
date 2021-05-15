@@ -8,18 +8,20 @@ import {
   FormGroup,
   FormGroupLabel,
   ErrorMessage,
-} from "../Form/style.js";
+} from "./style.js";
 
-function AddEventForm({ onSubmitData, error }) {
+function AddEventForm({ onSubmitData, error, showEventbox, setShowEventbox }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-//   Modify form to include both START date, END date
-// and optional START time and END time
+  const submitHandler = (data) => {
+      console.log('data', data);
+      onSubmitData(data);
+  };
   return (
-    <FormStyle onSubmit={handleSubmit(onSubmitData)}>
+    <FormStyle onSubmit={handleSubmit(submitHandler)}>
       <FormInner>
         <FormGroup>
           <FormGroupLabel htmlFor="title">
@@ -46,7 +48,7 @@ function AddEventForm({ onSubmitData, error }) {
         </FormGroup>
         <FormGroup>
           <FormGroupLabel htmlFor="date">
-            Date
+            Start Date
             {errors.date?.type === "required" && (
               <ErrorMessage>Date is Required</ErrorMessage>
             )}
@@ -54,19 +56,43 @@ function AddEventForm({ onSubmitData, error }) {
           <InputField
             type="date"
             id="date"
-            {...register("date", { required: true })}
+            {...register("startdate", { required: true })}
           />
         </FormGroup>
         <FormGroup>
           <FormGroupLabel htmlFor="time">
-            Time
+            Start Time
           </FormGroupLabel>
           <InputField
             type="time"
             id="time"
-            {...register("time", { required: false })}
+            {...register("starttime", { required: false })}
           />
         </FormGroup>
+        <FormGroup>
+          <FormGroupLabel htmlFor="date">
+            End Date
+            {errors.date?.type === "required" && (
+              <ErrorMessage>End Date is Required</ErrorMessage>
+            )}
+          </FormGroupLabel>
+          <InputField
+            type="date"
+            id="date"
+            {...register("enddate", { required: true })}
+          />
+        </FormGroup>
+        <FormGroup>
+          <FormGroupLabel htmlFor="date">
+            End Time
+          </FormGroupLabel>
+          <InputField
+            type="time"
+            id="time"
+            {...register("endtime", { required: false })}
+          />
+        </FormGroup>
+        {/* <InputButton onClick={() => setShowEventbox (prev => !prev)} type="submit" value="Add Event" /> */}
         <InputButton type="submit" value="Add Event" />
       </FormInner>
     </FormStyle>

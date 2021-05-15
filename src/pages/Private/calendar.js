@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, Component, useEffect, useState } from "react";
+import React, { useLayoutEffect, Component, useEffect, setState, useState } from "react";
 // import { Link } from "react-router-dom";
 // import { render } from "react-dom";
 import ProfileNav from "../../components/ProfileNav";
@@ -34,6 +34,10 @@ const MyCalendar = () => {
         setShowEventbox(prev => !prev);
     };
 
+    // TO DO: Create an event modal wrapper that contains the data of a 
+    // selected event on the calendar which allows more description of the
+    // event and can possibly delete or update it.
+
     return (
         <PrivateLayout>
             <ProfileNav />
@@ -44,6 +48,11 @@ const MyCalendar = () => {
                     startAccessor = "start"
                     endAccessor = "end"
                     style = {{ height: 500 }}
+                    // onSelectEvent = {event => EventWrapper({event})}
+                    onSelectEvent = {event => alert(`Title: ${event.title} Description: ${event.desc}`)}
+                    // components = {{
+                    //     event: EventWrapper
+                    // }}
                 />
                 {/* <div className="modal"> */}
                     <Button onClick={openEventbox}>Add Event</Button>
@@ -54,5 +63,5 @@ const MyCalendar = () => {
     );
 };
 
-
 export default MyCalendar;
+
