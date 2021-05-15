@@ -1,10 +1,9 @@
 import React from "react";
-import "./style.css";
+import "./style.css"
 
 const Eventbox = () => {
     return (
         <div class="box">
-        
         </div>
     );
 };
