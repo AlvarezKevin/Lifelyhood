@@ -1,0 +1,22 @@
+.main-calendar {
+    margin-top: 6vh;
+    margin-bottom: 15vh;
+    display: flex;
+    flex-direction: table-row;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    display: flex;
+    margin-right: 10vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1vh;
+}
