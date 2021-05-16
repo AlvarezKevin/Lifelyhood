@@ -11,3 +11,45 @@
   min-height: 100vh;
   display: flex;
 }
+
+.pl {
+  padding-left: 84px;
+}
+
+.setting-wrapper {
+  background-color: rgba(223, 227, 219, 1);
+  max-width: 920px;
+  width: 100%;
+  margin-left: 84px;
+  margin: 0px auto;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.setting-wrapper h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.setting-wrapper button:hover {
+  color: #000;
+}
+.setting-wrapper form {
+  max-width: 320px;
+  width: 100%;
+}
+
+.setting-wrapper input,
+.setting-wrapper button {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 580px) {
+  .setting-wrapper {
+    padding-left: 85px;
+  }
+}

@@ -18,7 +18,10 @@ import Schoolspace from "./pages/Private/schoolspace";
 import Personalspace from "./pages/Private/personalspace";
 import textEditor from "./pages/Private/textEditor";
 import Todos from "./pages/Private/Todos";
+
 import axios from "axios";
+// import PageNotFound from "./pages/404";
+import Setting from "./pages/Private/Setting";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -41,6 +44,7 @@ function App() {
           <Route path="/personal" component={Personalspace} />
           <Route path="/editor" component={textEditor} />
           <Route path="/todos" component={Todos} />
+          <Route path="/Setting" component={Setting} />
         </Switch>
       </Router>
     </div>
