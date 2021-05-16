@@ -2,7 +2,7 @@ import "../../styles/Contact.css";
 import { FlexFooter } from "./AuthStyle";
 
 import PublicLayout from "./../../Layout/Public";
-export default function Login() {
+export default function ContactPage() {
   return (
     <PublicLayout isVisibleOnPrivate={true}>
       <div className="contact-page content-wrap">
