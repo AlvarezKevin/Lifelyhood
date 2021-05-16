@@ -49,7 +49,7 @@ export const VerticleLine = styled.div`
   background-color: #4a4a4a;
 `;
 export const HumburgerBtn = styled.div`
-  height: 30px;
+  height: 25px;
   width: 30px;
   cursor: pointer;
   display: flex;
@@ -64,7 +64,7 @@ export const HumburgerBtn = styled.div`
   & span {
     display: flex;
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-color: #4a4a4a;
   }
 
