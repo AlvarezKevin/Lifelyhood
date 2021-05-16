@@ -18,8 +18,8 @@ const Profile = () => {
           <UserInfo />
           <div className="pages">
             <SpaceItem to="/work" alt="WorkSpace" imgSrc={work} />
-            <SpaceItem to="/school" alt="WorkSpace" imgSrc={school} />
-            <SpaceItem to="/personal" alt="WorkSpace" imgSrc={personal} />
+            <SpaceItem to="/school" alt="SchoolSpace" imgSrc={school} />
+            <SpaceItem to="/personal" alt="PersonalSpace" imgSrc={personal} />
           </div>
         </div>
       </div>

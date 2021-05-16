@@ -1,29 +1,29 @@
 import React from "react";
-import { Editor, EditorState, RichUtils } from "draft-js";
-import BlockStyleToolbar, {getBlockStyle} from "./blockStyles/BlockStyleToolbar";
+import { Editor, EditorState, RichUtils, convertToRaw, co } from "draft-js";
+import { convertToHTML } from "draft-convert";
+import BlockStyleToolbar, {
+  getBlockStyle,
+} from "./blockStyles/BlockStyleToolbar";
 import "../../styles/textEditor.css";
-
-
 
 class Toolbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorState: EditorState.createEmpty()
+      editorState: EditorState.createEmpty(),
     };
-
   }
-  toggleBlockType = blockType => {
+  toggleBlockType = (blockType) => {
     this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
   };
 
-  onChange = editorState => {
+  onChange = (editorState) => {
     this.setState({
-      editorState
+      editorState,
     });
   };
 
-  handleKeyCommand = command => {
+  handleKeyCommand = (command) => {
     const newState = RichUtils.handleKeyCommand(
       this.state.editorState,
       command
@@ -35,10 +35,10 @@ class Toolbar extends React.Component {
     return "not-handled";
   };
 
-  onBoldClick = event => {
+  onBoldClick = (event) => {
     this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, "BOLD"));
   };
-  
+
   onUnderlineClick = () => {
     this.onChange(
       RichUtils.toggleInlineStyle(this.state.editorState, "UNDERLINE")
@@ -57,39 +57,50 @@ class Toolbar extends React.Component {
     );
   };
 
-  toggleBlockType = blockType => {
+  toggleBlockType = (blockType) => {
     this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
   };
 
   render() {
+    console.log(`this.state.editorState`, this.state.editorState);
     return (
-      
       <div className="editorContainer">
         <div className="toolbar">
           <button className="styleButton" id="bold" onClick={this.onBoldClick}>
             B
           </button>
-          <button className="styleButton" id="underline"onClick={this.onUnderlineClick}>
+          <button
+            className="styleButton"
+            id="underline"
+            onClick={this.onUnderlineClick}
+          >
             U
           </button>
-          
-          <button className="styleButton" id="italic" onClick={this.onItalicClick}>
+
+          <button
+            className="styleButton"
+            id="italic"
+            onClick={this.onItalicClick}
+          >
             I
           </button>
-          <button className="styleButton" id="strikethrough" onClick={this.onStrikeThroughClick}>
-          abc
-        </button>
-       
+          <button
+            className="styleButton"
+            id="strikethrough"
+            onClick={this.onStrikeThroughClick}
+          >
+            abc
+          </button>
+
           <BlockStyleToolbar
             editorState={this.state.editorState}
             onToggle={this.toggleBlockType}
           />
-          
         </div>
 
         <div className="editors">
           <Editor
-            placeholder = "Start Writing ..."
+            placeholder="Start Writing ..."
             blockStyleFn={getBlockStyle}
             editorState={this.state.editorState}
             handleKeyCommand={this.handleKeyCommand}
