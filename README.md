@@ -1,4 +1,5 @@
 # Lifelyhood
+[Link to website](lifelyhood.herokuapp.com)
 
 ## Setup
 Running server:
