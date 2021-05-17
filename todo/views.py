@@ -6,7 +6,7 @@ from .serializers import TodoSerializer
 from .models import Todo
 
 # Create your views here.
-def new_todo(request):
+def todos(request):
     if request.method == 'POST':
         serializer = TodoSerializer(data=request.data)
         if serializer.is_valid():
@@ -18,7 +18,7 @@ def new_todo(request):
     return ""
         
 
-def todo(request,id):
+def todos_id(request,id):
     todo = Todo.objects.get(id=id)
     if request.user != todo.user:
         return HttpResponse(status=403)

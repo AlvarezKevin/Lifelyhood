@@ -6,7 +6,7 @@ from .serializers import NoteSerializer
 from .models import Note
 
 # Create your views here.
-def new_note(request):
+def notes(request):
     if request.method == 'POST':
         serializer = NoteSerializer(data=request.data)
         if serializer.is_valid():
@@ -18,7 +18,7 @@ def new_note(request):
     return ""
         
 
-def note(request,id):
+def notes_id(request,id):
     note = Note.objects.get(id=id)
     if request.user != note.user:
         return HttpResponse(status=403)
