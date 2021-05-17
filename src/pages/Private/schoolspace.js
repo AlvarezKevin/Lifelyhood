@@ -32,9 +32,9 @@ const Schoolspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/clubs"
+            to="/todos"
             imgSrc={clubs}
-            title="Clubs"
+            title="Todos"
           />
           <SpaceItem
             colorClassName={color}

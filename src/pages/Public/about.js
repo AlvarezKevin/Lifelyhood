@@ -8,7 +8,7 @@ import Hammad from "../../images/about/hammedPic.jpg";
 import PublicLayout from "./../../Layout/Public";
 import "../../styles/About.css";
 import { FlexFooter } from "./AuthStyle";
-export default function Login() {
+export default function AboutPage() {
   return (
     <PublicLayout isVisibleOnPrivate={true}>
       <div className="">

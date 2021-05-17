@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('notes.urls')),
     path('', include('user_calendar.urls')),
-    re_path('.*',TemplateView.as_view(template_name='index.html')),
+    path('',include('todo.urls')),
+    re_path('.*',TemplateView.as_view(template_name='index.html'))
 ]
