@@ -46,7 +46,7 @@ function App() {
           <Route path="/editor" component={textEditor} />
           <Route path="/todos" component={Todos} />
           <Route path="/Setting" component={Setting} />
-           <Route path="/calendar" component={MyCalendar} />
+          <Route path="/calendar" component={MyCalendar} />
         </Switch>
       </Router>
     </div>
