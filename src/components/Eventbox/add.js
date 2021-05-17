@@ -43,7 +43,7 @@ function AddEventForm({ onSubmitData, error, showEventbox, setShowEventbox }) {
           <InputField
             id="description"
             type="description"
-            {...register("password", { required: false })}
+            {...register("description", { required: false })}
           />
         </FormGroup>
         <FormGroup>
