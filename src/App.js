@@ -17,6 +17,7 @@ import Workspace from "./pages/Private/workspace";
 import Schoolspace from "./pages/Private/schoolspace";
 import Personalspace from "./pages/Private/personalspace";
 import textEditor from "./pages/Private/textEditor";
+import MyCalendar from "./pages/Private/calendar";
 import Todos from "./pages/Private/Todos";
 
 import axios from "axios";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/editor" component={textEditor} />
           <Route path="/todos" component={Todos} />
           <Route path="/Setting" component={Setting} />
+           <Route path="/calendar" component={MyCalendar} />
         </Switch>
       </Router>
     </div>

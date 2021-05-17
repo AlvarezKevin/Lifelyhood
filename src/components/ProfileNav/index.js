@@ -45,13 +45,14 @@ const ProfileNav = () => {
     );
   }
 
+
   return (
     <>
       <Nav>
         <NavLink to="/setting">
           <img src={settings} alt="settings" />
         </NavLink>
-        <NavLink to="/">
+        <NavLink to="/calendar">
           <img src={calender} alt="calender" />
         </NavLink>
         {space1}
