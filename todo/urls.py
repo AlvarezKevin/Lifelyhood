@@ -3,6 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('new-todo', views.new_todo, name='new-todo'),
-    path('todo/<int:id>', views.todo, name='todo'),
+    path('todos', views.todos, name='todos'),
+    path('todos/<int:id>', views.todos_id, name='todos-id'),
 ]
