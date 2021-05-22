@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+import Root from "./Root"; // <------------- new import
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Public Pages
@@ -30,7 +31,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFToken";
 function App() {
   return (
     <div className="app-wrapper">
-      <Router>
+      <Root>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
@@ -48,7 +49,7 @@ function App() {
           <Route path="/Setting" component={Setting} />
           <Route path="/calendar" component={MyCalendar} />
         </Switch>
-      </Router>
+      </Root>
     </div>
   );
 }
