@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'user_calendar',
     'notes',
+    'todo',
     'djoser',
     'apps.accounts',
 ]
