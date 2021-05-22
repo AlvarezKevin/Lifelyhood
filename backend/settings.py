@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nn5+$+0r4iro(^*dca4$v0lc45vrbh+c+jwio@bws28%1^_7yd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lifelyhood.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
