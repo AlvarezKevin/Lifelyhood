@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import ProfileNav from "../components/ProfileNav";
 import { useAuthCtx } from "../Hooks/useAuthContext";
 import Navbar from "./../components/Navbar";
-const PrivateLayout = ({ children }) => {
+const PrivateLayout = ({ children, title }) => {
   const { isAuthenticated } = useAuthCtx();
   const history = useHistory();
   useEffect(() => {
@@ -18,6 +18,9 @@ const PrivateLayout = ({ children }) => {
     <div style={{ width: "100%", flexDirection: "column", display: "flex" }}>
       <Navbar />
       <ProfileNav />
+      {title && (
+        <h3 style={{ textAlign: "center", fontWeight: "bold" }}>{title}</h3>
+      )}
       {isAuthenticated ? children : null}
     </div>
   );

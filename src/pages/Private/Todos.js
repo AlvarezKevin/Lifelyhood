@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PrivateLayout from "../../Layout/Private";
 import { TodoWrapper, TodoItem, AddTodo } from "../../components/Todos";
 import { nanoid } from "nanoid";
@@ -61,7 +61,7 @@ const Todos = () => {
     });
   };
 
-  const { isCheckedListOpen, isUncheckedListOpen } = open;
+  const { isCheckedListOpen } = open;
   const toggleCheckedCollapse = () =>
     setOpen((o) => ({ ...o, isCheckedListOpen: !o.isCheckedListOpen }));
   return (
