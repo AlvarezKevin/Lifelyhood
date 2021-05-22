@@ -1,10 +1,10 @@
 import pic from "../../images/about/manage.png";
-import Mike from "../../images/about/manage.jpg";
-import Kevin from "../../images/about/manage.jpg";
-import Niharika from "../../images/about/manage.jpg";
-import Myriam from "../../images/about/manage.jpg";
-import Kazi from "../../images/about/manage.jpg";
-import Hammad from "../../images/about/manage.jpg";
+import Mike from "../../images/about/mikePic.jpeg";
+import Kevin from "../../images/about/kPic.jpg";
+import Niharika from "../../images/about/nPic.jpg";
+import Myriam from "../../images/about/mPic.jpg";
+import Kazi from "../../images/about/kaziPic.jpg";
+import Hammad from "../../images/about/hammedPic.jpg";
 import PublicLayout from "./../../Layout/Public";
 import "../../styles/About.css";
 import { FlexFooter } from "./AuthStyle";
