@@ -206,3 +206,6 @@ if os.path.isfile(dotenv_file):
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600) 
+
+options = DATABASES['default'].get('OPTIONS', {})
+options.pop('sslmode', None)
