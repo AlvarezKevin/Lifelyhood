@@ -10,7 +10,7 @@ import {
   ErrorMessage,
 } from "./style";
 
-function SignupForm({ onSubmitData, error }) {
+function SignupForm({ onSubmitData, loading }) {
   const {
     register,
     handleSubmit,
@@ -24,16 +24,16 @@ function SignupForm({ onSubmitData, error }) {
     <FormStyle onSubmit={handleSubmit(submitHandler)}>
       <FormInner>
         <FormGroup>
-          <FormGroupLabel htmlFor="name">
-            Name
-            {errors.name?.type === "required" && (
-              <ErrorMessage>Name is Required</ErrorMessage>
+          <FormGroupLabel htmlFor="username">
+            Username
+            {errors.username?.type === "required" && (
+              <ErrorMessage>Username is Required</ErrorMessage>
             )}
           </FormGroupLabel>
           <InputField
             type="text"
-            id="name"
-            {...register("name", { required: true })}
+            id="username"
+            {...register("username", { required: true })}
           />
         </FormGroup>
         <FormGroup>
@@ -62,7 +62,7 @@ function SignupForm({ onSubmitData, error }) {
             {...register("password", { required: true })}
           />
         </FormGroup>
-        <InputButton type="submit" value="Sign up" />
+        {!loading && <InputButton type="submit" value="Sign up" />}
       </FormInner>
     </FormStyle>
   );

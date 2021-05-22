@@ -12,15 +12,13 @@ const PrivateLayout = ({ children, title }) => {
       toast.error("Please login to access private pages");
       history.push("/login");
     }
-  }, [isAuthenticated, history]);
+  }, [isAuthenticated]);
 
   return (
     <div style={{ width: "100%", flexDirection: "column", display: "flex" }}>
       <Navbar />
       <ProfileNav />
-      {title && (
-        <h3 style={{ textAlign: "center", fontWeight: "bold" }}>{title}</h3>
-      )}
+      {title && <h3 style={{ textAlign: "center", fontWeight: "bold" }}>{title}</h3>}
       {isAuthenticated ? children : null}
     </div>
   );
