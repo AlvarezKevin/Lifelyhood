@@ -23,7 +23,8 @@ import Todos from "./pages/Private/Todos";
 import axios from "axios";
 // import PageNotFound from "./pages/404";
 import Setting from "./pages/Private/Setting";
-
+axios.defaults.baseURL = "http://127.0.0.1:8000";
+//axios.defaults.headers.common = {headers: {'X-CSRFToken': csrftoken}}
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
