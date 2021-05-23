@@ -1,3 +1,4 @@
+////renders the buttons for the block style options that arent headers
 import React from "react";
 
 class BlockStyleButton extends React.Component {

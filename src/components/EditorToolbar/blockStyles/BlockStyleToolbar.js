@@ -1,8 +1,15 @@
+//blockstyle defintions
 import React from "react";
 //import { EditorState, Editor, RichUtils, AtomicBlockUtils } from "draft-js";
 import BlockStyleButton from "./BlockStyleButton";
 import HeaderStyleDropdown from "./HeaderStyleDropdown";
 
+//Draft.js has several out-of-the-box block types associated with HTML elements
+//such as diff headers blockquote code-block and list item 
+
+//label is the text displayed
+//style is a Draft.js keyword that tells how the content in your editor should be rendered
+//button object
 export const BLOCK_TYPES = [
     { label: " “ ” ", style: "blockquote" },
     { label: "UL", style: "unordered-list-item" },
@@ -10,6 +17,8 @@ export const BLOCK_TYPES = [
     { label: "{ }", style: "code-block" }
 ];
 
+//Header object
+//If a block style isn't specified, the content block type will default to none(unstyled)
 export const HEADER_TYPES = [
     { label: "(None)", style: "unstyled" },
     { label: "H1", style: "header-one" },
@@ -20,6 +29,7 @@ export const HEADER_TYPES = [
     { label: "H6", style: "header-six" }
 ];
 
+//will pass into editorState for the editor to know how to style
 export function getBlockStyle(block) {
     switch (block.getType()) {
         case "blockquote":
