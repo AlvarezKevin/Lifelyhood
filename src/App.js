@@ -23,7 +23,7 @@ import Todos from "./pages/Private/Todos";
 import axios from "axios";
 // import PageNotFound from "./pages/404";
 import Setting from "./pages/Private/Setting";
-
+//axios.defaults.headers.common = {headers: {'X-CSRFToken': csrftoken}}
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
@@ -46,7 +46,7 @@ function App() {
           <Route path="/editor" component={textEditor} />
           <Route path="/todos" component={Todos} />
           <Route path="/Setting" component={Setting} />
-           <Route path="/calendar" component={MyCalendar} />
+          <Route path="/calendar" component={MyCalendar} />
         </Switch>
       </Router>
     </div>

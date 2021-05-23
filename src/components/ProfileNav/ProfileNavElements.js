@@ -12,7 +12,8 @@ export const Nav = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding: 1rem;
+  width: 75px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;

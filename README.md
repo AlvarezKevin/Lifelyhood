@@ -1,14 +1,16 @@
 # Lifelyhood
 
+[Link to website](https://lifelyhood.herokuapp.com)
+
 ## Setup
+
 Running server:
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+`pip install -r requirements.txt`
+`python manage.py migrate`
+`python manage.py runserver`
 
 Running client:
 Client README.md has more information.
-
 
 # Getting Started with Create React App
 

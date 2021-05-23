@@ -1,3 +1,4 @@
+////renders the header style dropdown menu
 import React from "react";
 
 class HeaderStyleDropdown extends React.Component {

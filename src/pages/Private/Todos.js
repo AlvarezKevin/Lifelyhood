@@ -64,6 +64,8 @@ const Todos = () => {
   const { isCheckedListOpen, isUncheckedListOpen } = open;
   const toggleCheckedCollapse = () =>
     setOpen((o) => ({ ...o, isCheckedListOpen: !o.isCheckedListOpen }));
+  const toggleUnCheckedCollapse = () =>
+    setOpen((o) => ({ ...o, isUncheckedListOpen: !o.isUncheckedListOpen }));
   return (
     <PrivateLayout>
       <TodoWrapper>
@@ -77,11 +79,15 @@ const Todos = () => {
         />
 
         {/* Task TODOS */}
-        <h3 onClick={toggleCheckedCollapse}>
-          {isCheckedListOpen ? <DownIcon width="18" /> : <UpIcon width="18" />}{" "}
+        <h3 onClick={toggleUnCheckedCollapse}>
+          {isUncheckedListOpen ? (
+            <DownIcon width="18" />
+          ) : (
+            <UpIcon width="18" />
+          )}{" "}
           Tasks
         </h3>
-        <Collapse isOpen={isCheckedListOpen}>
+        <Collapse isOpen={isUncheckedListOpen}>
           {todoList
             .filter((o) => !o.isCompleted)
             .map((o) => (

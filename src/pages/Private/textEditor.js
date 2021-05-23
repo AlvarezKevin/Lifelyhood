@@ -5,7 +5,7 @@ import PrivateLayout from "./../../Layout/Private";
 class textEditor extends Component {
   render() {
     return (
-      <PrivateLayout>
+      <PrivateLayout title="Notes">
         <div className="pg">
           <Toolbar />
         </div>

@@ -20,16 +20,16 @@ function LoginForm({ onSubmitData, error }) {
     <FormStyle onSubmit={handleSubmit(onSubmitData)}>
       <FormInner>
         <FormGroup>
-          <FormGroupLabel htmlFor="email">
-            Email
-            {errors.email?.type === "required" && (
-              <ErrorMessage>Email is Required</ErrorMessage>
+          <FormGroupLabel htmlFor="username">
+            Username
+            {errors.username?.type === "required" && (
+              <ErrorMessage>Username is Required</ErrorMessage>
             )}
           </FormGroupLabel>
           <InputField
-            type="email"
-            id="email"
-            {...register("email", { required: true })}
+            type="text"
+            id="username"
+            {...register("username", { required: true })}
           />
         </FormGroup>
         <FormGroup>

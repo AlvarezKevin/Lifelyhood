@@ -1,33 +1,38 @@
 import { useState } from "react";
+import axios from "axios";
+import { Spinner } from 'reactstrap';
+
 import LoginForm from "../../components/Form/LoginForm";
 import PublicLayout from "../../Layout/Public";
 import { FlexMain, FlexArticle, FlexFooter, ErrorMessage } from "./AuthStyle";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
 
-const adminUser = {
-  email: "admin@admin.com",
-  password: "admin123",
-};
+
 export default function Login() {
   const { setUserDetails } = useAuthCtx();
-
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const submitHandler = async (data) => {
+  const submitHandler = async (formData) => {
     try {
-      const { email, password } = data;
-      if (email !== adminUser.email) {
-        throw new Error("Invalid Email");
-      } else if (password !== adminUser.password) {
-        throw new Error("Invalid Password");
+      const { username, password } = formData;
+      setLoading(true)
+      const { data } = await axios.post('/api/token/login/', { username, password })
+      if (data?.auth_token) {
+        const token = `${data?.auth_token}`;
+        window.localStorage.setItem('user_token', token)
+        setUserDetails({
+          username,
+          token,
+        });
       }
-      setUserDetails({
-        username: "Anonymous",
-        email,
-        token: "a1s2d3f4cdfsdf",
-      });
+      setLoading(false)
     } catch (err) {
-      console.log(`err`);
-      setError(`${err.message}`);
+      setLoading(false)
+      const data = err?.response?.data || {};
+      const msgs = Object.entries(data)
+        .map(([key, arr]) => Array.isArray(arr) ? `${key}: ${arr[0] || 'is required'}` : `${key}: is required`)
+        .join("\n");
+      setError(`${msgs}`);
     }
   };
   return (
@@ -37,6 +42,9 @@ export default function Login() {
           <LoginForm onSubmitData={submitHandler} />
         </FlexArticle>
       </FlexMain>
+      <div className='flex-c'>
+        {loading && <Spinner color="dark" />}
+      </div>
       {error && (
         <ErrorMessage style={{ textAlign: "center" }}>{error}</ErrorMessage>
       )}
