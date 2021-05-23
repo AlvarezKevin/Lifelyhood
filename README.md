@@ -1,6 +1,6 @@
 # Lifelyhood
 
-[Link to website](lifelyhood.herokuapp.com)
+[Link to website](https://lifelyhood.herokuapp.com)
 
 ## Setup
 
