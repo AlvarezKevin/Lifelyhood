@@ -11,7 +11,7 @@ import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
 
 //   const URL = "http://127.0.0.1:8000/api/calendar/events/"
-const URL = "/api/calendar/events"
+const URL = "/api/calendar/events/"
 const Eventbox = ({showEventbox, setShowEventbox}) => {
     const animation = useSpring({
         config: {
