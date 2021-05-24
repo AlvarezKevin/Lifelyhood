@@ -16,8 +16,6 @@ def notes(request):
         notes = list(Note.objects.get(user=request.user).order_by('-date_posted'))
         return JsonResponse(notes,safe=False)
     return ""
-        
-
 def notes_id(request,id):
     note = Note.objects.get(id=id)
     if request.user != note.user:

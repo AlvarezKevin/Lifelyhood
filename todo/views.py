@@ -1,22 +1,27 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponse
+from django.http import HttpResponseNotFound
 from django.core import serializers
 from .serializers import TodoSerializer 
 from .models import Todo
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 
 # Create your views here.
 def todos(request):
-    if request.method == 'POST':
-        serializer = TodoSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save(user=request.user)
-        return JsonResponse(serializer.data,safe=False)
-    elif request.method == 'GET':
-        todos = list(Todo.objects.get(user=request.user).order_by('-date_posted'))
-        return JsonResponse(todos,safe=False)
-    return ""
-        
+    # if request.user.is_authenticated:
+        if request.method == 'POST':
+            serializer = TodoSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save(user=request.user)
+            return JsonResponse(serializer.data,safe=False)
+        elif request.method == 'GET':
+            todos = list(Todo.objects.get(user=request.user).order_by('-date_posted'))
+            return JsonResponse(todos,safe=False)
+        return ""
+    # else:
+    #     return HttpResponseNotFound("Failed")   
 
 def todos_id(request,id):
     todo = Todo.objects.get(id=id)
