@@ -13,13 +13,20 @@ def notes(request):
             serializer.save(user=request.user)
         return JsonResponse(serializer.data,safe=False)
     elif request.method == 'GET':
-        notes = list(Note.objects.get(user=request.user).order_by('-date_posted'))
-        return JsonResponse(notes,safe=False)
+        try:
+            notes = list(Note.objects.get(user=request.user).order_by('-date_posted'))
+            return JsonResponse(notes,safe=False)
+        except Note.DoesNotExist:
+            return HttpResponse(status=404)
     return ""
         
 
 def notes_id(request,id):
-    note = Note.objects.get(id=id)
+    note = None
+    try:
+        note = Note.objects.get(id=id)
+    except Note.DoesNotExist:
+        return HttpResponse(status=404)
     if request.user != note.user:
         return HttpResponse(status=403)
 

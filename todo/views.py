@@ -13,13 +13,20 @@ def todos(request):
             serializer.save(user=request.user)
         return JsonResponse(serializer.data,safe=False)
     elif request.method == 'GET':
-        todos = list(Todo.objects.get(user=request.user).order_by('-date_posted'))
-        return JsonResponse(todos,safe=False)
+        try:
+            todos = list(Todo.objects.get(user=request.user).order_by('-date_posted'))
+            return JsonResponse(todos,safe=False)
+        except Todo.DoesNotExist:
+            return HttpResponse(status=404)
     return ""
         
 
 def todos_id(request,id):
-    todo = Todo.objects.get(id=id)
+    todo = None
+    try:
+        todo = Todo.objects.get(id=id)
+    except Todo.DoesNotExist:
+        return HttpResponse(status=404) 
     if request.user != todo.user:
         return HttpResponse(status=403)
 
