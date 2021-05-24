@@ -19,7 +19,6 @@ def notes(request):
         except Note.DoesNotExist:
             return HttpResponse(status=404)
     return ""
-        
 
 def notes_id(request,id):
     note = None

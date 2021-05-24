@@ -5,13 +5,41 @@ import { nanoid } from "nanoid";
 import { Collapse } from "reactstrap";
 import { ReactComponent as DownIcon } from "../../images/chevron-down.svg";
 import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
+import axios from "axios";
+import { useAuthCtx } from "../../Hooks/useAuthContext";
+
+
+// const URL = "http://127.0.0.1:8000/todos"
+const URL = "todos"
 
 const Todos = () => {
+  const { setUserDetails } = useAuthCtx();
   const [todo, setTodo] = useState({
     todoText: "",
     loading: false,
   });
+  const [userTodoList, setUserTodoList] = useState([{}]);
   const [todoList, setTodoList] = useState([]);
+
+  useEffect(() => {
+    getTodos();
+  }, []);
+
+  const getTodos = async () => {
+
+
+    const response = await axios.get(URL).then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+}
   const setTodoDetail = (obj) => setTodo((o) => ({ ...o, ...obj }));
   const [open, setOpen] = useState({
     isCheckedListOpen: true,
