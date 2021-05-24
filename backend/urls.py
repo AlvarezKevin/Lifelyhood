@@ -24,6 +24,6 @@ urlpatterns = [
     path('',include('todo.urls')),
     path('', include('user_calendar.urls')),
     path('', include('apps.accounts.urls')),
-    # re_path('.*',TemplateView.as_view(template_name='index.html')),
+    re_path('.*',TemplateView.as_view(template_name='index.html')),
 ]
 # urlpatterns += accounts_urlpatterns 
