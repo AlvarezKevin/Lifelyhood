@@ -25,3 +25,10 @@
 .contact-page {
   font-size: large;
 }
+details {
+  margin-bottom: 1rem;
+}
+#indent {
+  padding-left: 2.5rem;
+  font-size: 1.25rem;
+}
