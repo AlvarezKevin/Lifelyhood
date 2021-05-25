@@ -13,4 +13,5 @@ whitenoise==5.2.0
 psycopg2==2.8.6
 djoser==2.1.0
 django-filter==2.4.0
-markdown==3.3 
+markdown==3.3
+Pillow==8.2.0
