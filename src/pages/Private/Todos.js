@@ -10,10 +10,11 @@ import { useAuthCtx } from "../../Hooks/useAuthContext";
 
 
 // const URL = "http://127.0.0.1:8000/todos"
-const URL = "todos"
+const URL = "/todos"
 
 const Todos = () => {
   const { setUserDetails } = useAuthCtx();
+  const [error, setError] = useState(null);
   const [todo, setTodo] = useState({
     todoText: "",
     loading: false,
@@ -40,6 +41,27 @@ const Todos = () => {
         // always executed
       });
 }
+
+  const postTodos = async (data) => {
+    try {
+      console.log('todo data', data);
+      const response = await axios.post(URL, data).then(function (response) {
+          // handle success
+          console.log(response);
+          })
+          .catch(function (error) {
+          // handle error
+          console.log(error);
+          })
+          .then(function () {
+          // always executed
+      });
+    } catch (err) {
+      console.log(`err`);
+      setError(`${err.message}`);
+    }
+  }
+
   const setTodoDetail = (obj) => setTodo((o) => ({ ...o, ...obj }));
   const [open, setOpen] = useState({
     isCheckedListOpen: true,
@@ -65,6 +87,12 @@ const Todos = () => {
         setTodoList(shallowList);
 
         setTodoDetail({ loading: false, todoText: "" });
+
+        const todoData = {
+          text: todo.todoText,
+          completed: false
+        };
+        postTodos(todoData);
       }, 200);
     } catch (err) {
       console.log(`err`, err);

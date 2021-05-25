@@ -1,3 +1,4 @@
+from django.contrib import auth
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponse
@@ -8,8 +9,15 @@ from .models import Todo
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 import json
+# from django.contrib.auth.decorators import login_required
+from rest_framework.decorators import authentication_classes, permission_classes
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
+# @login_required
+@csrf_exempt
+@authentication_classes((TokenAuthentication,))
+@permission_classes((IsAuthenticated,))
 def todos(request):
     if request.method == 'POST':
         data = json.loads(request.body)
@@ -26,7 +34,10 @@ def todos(request):
             return HttpResponse(status=404)
     return ""
         
-
+# @login_required
+@csrf_exempt
+@authentication_classes((TokenAuthentication,))
+@permission_classes((IsAuthenticated,))
 def todos_id(request,id):
     todo = None
     try:
