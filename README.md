@@ -9,10 +9,13 @@ Running server:
 `python manage.py migrate`
 `python manage.py runserver`
 
-Running client:
-Client README.md has more information.
+To run tests you can use
+`python manage.py test`
+However, if you wish to get a coverage report and view it. Run this instead
+`coverage run --source='.' --omit=env/* manage.py test && coverage report`
+We're currently at 88%
 
-# Getting Started with Create React App
+# Client README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
