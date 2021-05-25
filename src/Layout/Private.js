@@ -18,7 +18,9 @@ const PrivateLayout = ({ children, title }) => {
     <div style={{ width: "100%", flexDirection: "column", display: "flex" }}>
       <Navbar />
       <ProfileNav />
-      {title && <h3 style={{ textAlign: "center", fontWeight: "bold" }}>{title}</h3>}
+      {title && (
+        <h3 style={{ textAlign: "center", fontWeight: "bold" }}>{title}</h3>
+      )}
       {isAuthenticated ? children : null}
     </div>
   );

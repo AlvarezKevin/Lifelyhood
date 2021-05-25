@@ -4,8 +4,7 @@ import health from "../../images/personal/health.svg";
 import grocery from "../../images/personal/grocery.svg";
 import journal from "../../images/personal/journal.svg";
 import travel from "../../images/personal/travel.svg";
-import add from "../../images/personal/add.svg";
-
+import schedule from "../../images/school/schedule.svg";
 import UserInfo from "../../components/UserInfo";
 import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
@@ -19,15 +18,9 @@ const Personalspace = () => {
         <div className="pages">
           <SpaceItem
             colorClassName={color}
-            to="/fitness-space"
+            to="/fitness"
             title="Fitness"
             imgSrc={fitness}
-          />
-          <SpaceItem
-            colorClassName={color}
-            to="/editor"
-            title="Health"
-            imgSrc={health}
           />
           <SpaceItem
             colorClassName={color}
@@ -37,21 +30,27 @@ const Personalspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
+            to="/health"
+            title="Health"
+            imgSrc={health}
+          />
+          <SpaceItem
+            colorClassName={color}
+            to="/journal"
             title="Journal"
             imgSrc={journal}
           />
           <SpaceItem
             colorClassName={color}
-            to="/travel-space"
+            to="/travel"
             title="Travel"
             imgSrc={travel}
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
-            title="Add Page"
-            imgSrc={add}
+            to="/calendar"
+            title="Schedule"
+            imgSrc={schedule}
           />
         </div>
       </div>
