@@ -3,18 +3,21 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 from django.core import serializers
 from .serializers import NoteSerializer
+import json
 from .models import Note
 
 # Create your views here.
 def notes(request):
     if request.method == 'POST':
-        serializer = NoteSerializer(data=request.data)
+        data = json.loads(request.body)
+        serializer = NoteSerializer(data=data)
         if serializer.is_valid():
             serializer.save(user=request.user)
         return JsonResponse(serializer.data,safe=False)
     elif request.method == 'GET':
         try:
-            notes = list(Note.objects.get(user=request.user).order_by('-date_posted'))
+            notes= Note.objects.filter(user=request.user).order_by('-date_posted')
+            notes= serializers.serialize('python',notes)
             return JsonResponse(notes,safe=False)
         except Note.DoesNotExist:
             return HttpResponse(status=404)
