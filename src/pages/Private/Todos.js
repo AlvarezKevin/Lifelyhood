@@ -18,7 +18,6 @@ const Todos = () => {
     todoText: "",
     loading: false,
   });
-  const [userTodoList, setUserTodoList] = useState([{}]);
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
