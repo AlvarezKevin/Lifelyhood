@@ -15,6 +15,9 @@ However, if you wish to get a coverage report and view it. Run this instead
 `coverage run --source='.' --omit=env/* manage.py test && coverage report`
 We're currently at 88%
 
+## API Docs
+[Documentation](https://github.com/AlvarezKevin/Lifelyhood/blob/main/AuthAPI-Docs.pdf).
+
 # Client README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
