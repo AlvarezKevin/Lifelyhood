@@ -15,10 +15,7 @@ However, if you wish to get a coverage report and view it. Run this instead
 `coverage run --source='.' --omit=env/* manage.py test && coverage report`
 We're currently at 88%
 
-Running client:
-Client README.md has more information.
-
-# Getting Started with Create React App
+# Client README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
