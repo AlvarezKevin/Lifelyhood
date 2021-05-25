@@ -5,7 +5,7 @@ import PrivateLayout from "../../Layout/Private";
 class Links extends Component {
   render() {
     return (
-      <PrivateLayout title="Video conference Links">
+      <PrivateLayout title="Video Conference Links">
         <div className="pg">
           <Toolbar />
         </div>

@@ -54,7 +54,7 @@ export default function Signup() {
         <ErrorMessage style={{ textAlign: "center" }}>{error}</ErrorMessage>
       )}
       <FlexFooter>
-        By clicking “Log in” above, you acknowledge that you have read and
+        By clicking “Sign up” above, you acknowledge that you have read and
         understood, and agree to Lifelyhood's Terms & Conditions.
       </FlexFooter>
     </PublicLayout>

@@ -8,9 +8,8 @@ import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
 
-
 // const URL = "http://127.0.0.1:8000/todos"
-const URL = "/todos"
+const URL = "/todos";
 
 const Todos = () => {
   const { user } = useAuthCtx();
@@ -27,12 +26,13 @@ const Todos = () => {
   }, []);
 
   const getTodos = async () => {
-
-
-    const response = await axios.get(URL, {
-            headers: {
-              "Authorization": `Token ${user.token}`
-            }}).then(function (response) {
+    const response = await axios
+      .get(URL, {
+        headers: {
+          Authorization: `Token ${user.token}`,
+        },
+      })
+      .then(function (response) {
         // handle success
         console.log(response);
       })
@@ -43,30 +43,33 @@ const Todos = () => {
       .then(function () {
         // always executed
       });
-}
+  };
 
   const postTodos = async (data) => {
     try {
-      console.log('todo data', data);
-      const response = await axios.post(URL, data, {
-        headers: {
-          "Authorization": `Token ${user.token}`
-        }}).then(function (response) {
+      console.log("todo data", data);
+      const response = await axios
+        .post(URL, data, {
+          headers: {
+            Authorization: `Token ${user.token}`,
+          },
+        })
+        .then(function (response) {
           // handle success
           console.log(response);
-          })
-          .catch(function (error) {
+        })
+        .catch(function (error) {
           // handle error
           console.log(error);
-          })
-          .then(function () {
+        })
+        .then(function () {
           // always executed
-      });
+        });
     } catch (err) {
       console.log(`err`);
       setError(`${err.message}`);
     }
-  }
+  };
 
   const setTodoDetail = (obj) => setTodo((o) => ({ ...o, ...obj }));
   const [open, setOpen] = useState({
@@ -96,7 +99,7 @@ const Todos = () => {
 
         const todoData = {
           text: todo.todoText,
-          completed: false
+          completed: false,
         };
         postTodos(todoData);
       }, 200);
@@ -147,7 +150,7 @@ const Todos = () => {
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          Todo
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList

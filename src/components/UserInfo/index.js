@@ -9,11 +9,11 @@ const UserInfo = () => {
   let location = useLocation();
   let heading;
   if (location.pathname === "/work") {
-    heading = "User's WorkSpace";
+    heading = `${user?.username}'s WorkSpace`;
   } else if (location.pathname === "/school") {
-    heading = "User's SchoolSpace";
+    heading = `${user?.username}'s SchoolSpace`;
   } else if (location.pathname === "/personal") {
-    heading = "User's PersonalSpace";
+    heading = `${user?.username}'s PersonalSpace`;
   } else {
     heading = user.username || "Username";
   }

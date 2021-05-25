@@ -140,14 +140,14 @@ const Exams = () => {
           addHandler={onAddTodo}
         />
 
-        {/* Task TODOS */}
+        {/* Exams */}
         <h3 onClick={toggleUnCheckedCollapse}>
           {isUncheckedListOpen ? (
             <DownIcon width="18" />
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          Exams
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList
@@ -162,7 +162,7 @@ const Exams = () => {
             ))}
         </Collapse>
         <br />
-        {/* COMPLETED TODOS */}
+        {/* COMPLETED Exams */}
         <h3 onClick={toggleCheckedCollapse}>
           {isCheckedListOpen ? <DownIcon width="18" /> : <UpIcon width="18" />}{" "}
           Completed

@@ -140,14 +140,14 @@ const Assigments = () => {
           addHandler={onAddTodo}
         />
 
-        {/* Task TODOS */}
+        {/* Assignments*/}
         <h3 onClick={toggleUnCheckedCollapse}>
           {isUncheckedListOpen ? (
             <DownIcon width="18" />
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          Assignments
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList
@@ -162,7 +162,7 @@ const Assigments = () => {
             ))}
         </Collapse>
         <br />
-        {/* COMPLETED TODOS */}
+        {/* COMPLETED Assignments */}
         <h3 onClick={toggleCheckedCollapse}>
           {isCheckedListOpen ? <DownIcon width="18" /> : <UpIcon width="18" />}{" "}
           Completed

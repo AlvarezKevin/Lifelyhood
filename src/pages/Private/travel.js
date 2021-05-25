@@ -140,14 +140,14 @@ const Travel = () => {
           addHandler={onAddTodo}
         />
 
-        {/* Task TODOS */}
+        {/* List */}
         <h3 onClick={toggleUnCheckedCollapse}>
           {isUncheckedListOpen ? (
             <DownIcon width="18" />
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          List
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList
@@ -162,7 +162,7 @@ const Travel = () => {
             ))}
         </Collapse>
         <br />
-        {/* COMPLETED TODOS */}
+        {/* COMPLETED List */}
         <h3 onClick={toggleCheckedCollapse}>
           {isCheckedListOpen ? <DownIcon width="18" /> : <UpIcon width="18" />}{" "}
           Completed
