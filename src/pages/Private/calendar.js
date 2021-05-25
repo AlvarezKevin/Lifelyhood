@@ -28,8 +28,8 @@ const Button = styled.button`
 
 moment.locale("en-US");
 const localizer = momentLocalizer(moment)
-const URL = "http://127.0.0.1:8000/api/calendar/events/"
-// const URL = "/api/calendar/events/"
+// const URL = "http://127.0.0.1:8000/api/calendar/events/"
+const URL = "/api/calendar/events/"
 
 const MyCalendar = () => {
     const { setUserDetails } = useAuthCtx();
