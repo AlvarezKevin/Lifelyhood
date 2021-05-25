@@ -19,11 +19,12 @@ import Personalspace from "./pages/Private/personalspace";
 import textEditor from "./pages/Private/textEditor";
 import MyCalendar from "./pages/Private/calendar";
 import Todos from "./pages/Private/Todos";
-import grocery from "./pages/Private/grocery";
+import grocery from "./pages/Private/groceryspace";
 
 import axios from "axios";
 // import PageNotFound from "./pages/404";
 import Setting from "./pages/Private/Setting";
+import Groceryspace from "./pages/Private/groceryspace";
 
 //axios.defaults.headers.common = {headers: {'X-CSRFToken': csrftoken}}
 axios.defaults.xsrfCookieName = "csrftoken";
@@ -49,7 +50,7 @@ function App() {
           <Route path="/todos" component={Todos} />
           <Route path="/Setting" component={Setting} />
           <Route path="/calendar" component={MyCalendar} />
-          <Route path="/grocery" component={grocery} />
+          <Route path="/grocery" component={Groceryspace} />
         </Switch>
       </Router>
     </div>

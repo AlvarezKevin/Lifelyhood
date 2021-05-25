@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../../styles/grocery.css";
 import PrivateLayout from "../../Layout/Private";
 
-class grocery extends Component {
+class Groceryspace extends Component {
   render() {
     return (
       <PrivateLayout title="STAYING FIT">
@@ -14,4 +14,4 @@ class grocery extends Component {
     );
   }
 }
-export default grocery;
+export default Groceryspace;

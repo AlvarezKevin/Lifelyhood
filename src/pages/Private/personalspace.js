@@ -31,7 +31,7 @@ const Personalspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/grocery-space"
+            to="/grocery"
             title="Grocery"
             imgSrc={grocery}
           />
