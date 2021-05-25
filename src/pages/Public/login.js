@@ -6,7 +6,7 @@ import LoginForm from "../../components/Form/LoginForm";
 import PublicLayout from "../../Layout/Public";
 import { FlexMain, FlexArticle, FlexFooter, ErrorMessage } from "./AuthStyle";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
-
+// The public directory has all public pages that are accessible only when the user is not authenticated. And all pages are wrapped inside the public layout.
 export default function Login() {
   const { setUserDetails } = useAuthCtx();
   const [loading, setLoading] = useState(false);

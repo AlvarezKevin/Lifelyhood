@@ -7,7 +7,7 @@ import axios from "axios";
 import SignupForm from "../../components/Form/SignUpForm";
 import { FlexMain, FlexArticle, FlexFooter, ErrorMessage } from "./AuthStyle";
 import PublicLayout from "../../Layout/Public";
-
+// The public directory has all public pages that are accessible only when the user is not authenticated. And all pages are wrapped inside the public layout.
 export default function Signup() {
   const history = useHistory();
   const [error, setError] = useState("");

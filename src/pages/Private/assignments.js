@@ -7,10 +7,10 @@ import { ReactComponent as DownIcon } from "../../images/chevron-down.svg";
 import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
+// The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 
 // const URL = "http://127.0.0.1:8000/assigments"
 const URL = "/assigments";
-
 const Assigments = () => {
   const { user } = useAuthCtx();
   const [error, setError] = useState(null);

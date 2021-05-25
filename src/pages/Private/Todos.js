@@ -7,6 +7,12 @@ import { ReactComponent as DownIcon } from "../../images/chevron-down.svg";
 import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
+// Todo page has the list of user's todos
+// AddTodo is the StyledComponent that contains the input field and button for saving the todo.
+// TodoItem is a component that shows the todo title and show is todo completed or not.
+// Collapse is a "Reactstrap" UI library component to just show or hide the list.
+// TodoWrapper is also a simple div with stylecomponent for styling.
 
 // const URL = "http://127.0.0.1:8000/todos"
 const URL = "/todos";

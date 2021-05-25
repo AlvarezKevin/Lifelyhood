@@ -12,7 +12,7 @@ import Eventbox from "../../components/Eventbox";
 import "../../styles/Calendar.css";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
-
+// The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 const Button = styled.button`
   min-width: 100px;
   padding: 10px 18px;
