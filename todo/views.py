@@ -30,17 +30,18 @@ def todos(request):
 def todos_id(request,id):
     todo = None
     try:
-        todo = Todo.objects.get(id=id)
+        todo = Todo.objects.filter(id=id).get()
     except Todo.DoesNotExist:
         return HttpResponse(status=404) 
     if request.user != todo.user:
         return HttpResponse(status=403)
 
     if request.method == 'GET':
-        todo_json = serializers.serialize('json',todo)
+        todo_json = serializers.serialize('json',[todo,])
         return JsonResponse(todo_json,safe=False)
     elif request.method == 'PUT' or request.method == 'PATCH':
-        serializer = TodoSerializer(todo, data=request.data)
+        data = json.loads(request.body)
+        serializer = TodoSerializer(todo, data=data)
         if serializer.is_valid():
             serializer.save()
         return JsonResponse(serializer.data) 

@@ -26,17 +26,18 @@ def notes(request):
 def notes_id(request,id):
     note = None
     try:
-        note = Note.objects.get(id=id)
+        note = Note.objects.filter(id=id).get()
     except Note.DoesNotExist:
         return HttpResponse(status=404)
     if request.user != note.user:
         return HttpResponse(status=403)
 
     if request.method == 'GET':
-        note_json = serializers.serialize('json',note)
+        note_json = serializers.serialize('json',[note,])
         return JsonResponse(note_json,safe=False)
     elif request.method == 'PUT' or request.method == 'PATCH':
-        serializer = NoteSerializer(note, data=request.data)
+        data = json.loads(request.body)
+        serializer = NoteSerializer(note, data=data)
         if serializer.is_valid():
             serializer.save()
         return JsonResponse(serializer.data) 
