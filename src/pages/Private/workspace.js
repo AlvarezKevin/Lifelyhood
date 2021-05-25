@@ -4,7 +4,7 @@ import meetings from "../../images/work/meetings.svg";
 import ledger from "../../images/work/ledger.svg";
 import presentations from "../../images/work/presentations.svg";
 import tasks from "../../images/work/tasks.svg";
-import add from "../../images/work/add.svg";
+import schedule from "../../images/school/schedule.svg";
 import ProfileNav from "../../components/ProfileNav";
 import UserInfo from "../../components/UserInfo";
 import "../../styles/Pages.css";
@@ -38,21 +38,21 @@ const Workspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
+            to="/ledger"
             imgSrc={ledger}
             title="Ledger"
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
-            imgSrc={presentations}
-            title="Presentations"
+            to="/calendar"
+            imgSrc={schedule}
+            title="Schedule"
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
-            imgSrc={add}
-            title="Add Page"
+            to="/presentations"
+            imgSrc={presentations}
+            title="Presentations"
           />
         </div>
       </div>
