@@ -13,7 +13,7 @@ import { useAuthCtx } from "../../Hooks/useAuthContext";
 const URL = "/todos"
 
 const Todos = () => {
-  const { setUserDetails } = useAuthCtx();
+  const { user } = useAuthCtx();
   const [error, setError] = useState(null);
   const [todo, setTodo] = useState({
     todoText: "",
@@ -29,7 +29,10 @@ const Todos = () => {
   const getTodos = async () => {
 
 
-    const response = await axios.get(URL).then(function (response) {
+    const response = await axios.get(URL, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
         // handle success
         console.log(response);
       })
@@ -45,7 +48,10 @@ const Todos = () => {
   const postTodos = async (data) => {
     try {
       console.log('todo data', data);
-      const response = await axios.post(URL, data).then(function (response) {
+      const response = await axios.post(URL, data, {
+        headers: {
+          "Authorization": `Token ${user.token}`
+        }}).then(function (response) {
           // handle success
           console.log(response);
           })

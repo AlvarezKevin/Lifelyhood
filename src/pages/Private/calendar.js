@@ -32,7 +32,7 @@ const localizer = momentLocalizer(moment)
 const URL = "/api/calendar/events/"
 
 const MyCalendar = () => {
-    const { setUserDetails } = useAuthCtx();
+    const { user } = useAuthCtx();
     const [userEvents, setUserEvents] = useState({ userEventsList: []});
     const [showEventbox, setShowEventbox] = useState(false);
     const [showDetailbox, setShowDetailbox] = useState(false);
@@ -44,7 +44,10 @@ const MyCalendar = () => {
     // console.log(events)
 
     const getEvents = async () => {
-        const response = await axios.get(URL).then(json => {
+        const response = await axios.get(URL, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(json => {
             console.log(json.data)            
             const myEventsList = json.data.map(data =>
               {return {

@@ -4,6 +4,7 @@ import PrivateLayout from "./../../Layout/Private";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useAuthCtx } from "../../Hooks/useAuthContext";
 
 // const URLOne = "http://127.0.0.1:8000/api/users/set_username/"
 const URLOne = "/api/users/set_username/"
@@ -13,6 +14,7 @@ const URLTwo = "/api/users/me/"
 const URLThree = "/api/users/set_password/"
 
 const Setting = () => {
+  const { user } = useAuthCtx();
   const [error, setError] = useState(null);
   const {
     register,
@@ -39,7 +41,10 @@ const Setting = () => {
         console.log(newPassword)
 
         if (data.new_username) {
-          const requestOne = await axios.post(URLOne, newUsername).then(function (response) {
+          const requestOne = await axios.post(URLOne, newUsername, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
             // handle success
             console.log(response);
             })
@@ -53,7 +58,10 @@ const Setting = () => {
         }
 
         if (data.email) {
-          const requestTwo = await axios.put(URLTwo, newEmail).then(function (response) {
+          const requestTwo = await axios.put(URLTwo, newEmail, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
             // handle success
             console.log(response);
             })
@@ -67,7 +75,10 @@ const Setting = () => {
         }
 
         if (data.new_password) {
-          const requestThree = await axios.post(URLThree, newPassword).then(function (response) {
+          const requestThree = await axios.post(URLThree, newPassword, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
             // handle success
             console.log(response);
             })
@@ -91,7 +102,10 @@ const Setting = () => {
     }
     console.log(deleteUser)
     try {
-      const response = await axios.delete(URLTwo, deleteUser).then(function (response) {
+      const response = await axios.delete(URLTwo, deleteUser, {
+        headers: {
+          "Authorization": `Token ${user.token}`
+        }}).then(function (response) {
           // handle success
           console.log(response);
           })

@@ -13,6 +13,7 @@ import { useAuthCtx } from "../../Hooks/useAuthContext";
 //   const URL = "http://127.0.0.1:8000/api/calendar/events/"
 const URL = "/api/calendar/events/"
 const Eventbox = ({showEventbox, setShowEventbox}) => {
+    const { user } = useAuthCtx();
     const animation = useSpring({
         config: {
             duration: 250
@@ -26,7 +27,10 @@ const Eventbox = ({showEventbox, setShowEventbox}) => {
     const submitHandler = async (data) => {
       try {
         console.log('data', data);
-        const response = await axios.post(URL, data).then(function (response) {
+        const response = await axios.post(URL, data, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
             // handle success
             console.log(response);
             })
