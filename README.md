@@ -9,6 +9,12 @@ Running server:
 `python manage.py migrate`
 `python manage.py runserver`
 
+To run tests you can use
+`python manage.py test`
+However, if you wish to get a coverage report and view it. Run this instead
+`coverage run --source='.' --omit=env/* manage.py test && coverage report`
+We're currently at 88%
+
 Running client:
 Client README.md has more information.
 
