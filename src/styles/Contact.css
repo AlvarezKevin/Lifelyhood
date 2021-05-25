@@ -32,3 +32,9 @@ details {
   padding-left: 2.5rem;
   font-size: 1.25rem;
 }
+
+.centerposition {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

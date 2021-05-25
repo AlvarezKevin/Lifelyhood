@@ -55,6 +55,28 @@ export default function ContactPage() {
             <p id='indent'>You can select the button that you would like to apply to your text. To make bold do cmd+B, italics cmd+I. </p>
           </details>
 
+          <hr></hr>
+          <h2>
+            <b>Additional Question</b>
+          </h2>
+
+          <form>
+            <div>
+                <input type ="text" placeholder="First name" class="centerposition"/>
+                <br></br>
+                <input type ="text" placeholder="Last name" class="centerposition"/>
+            </div>
+            <br></br>
+            <div>
+                <input type ="text" placeholder="Email address" class="centerposition"/>
+            </div>
+            <br></br>
+            <div>
+                <textarea placeholder="Comment" rows="5" class="centerposition"></textarea>
+            </div>
+            <button class="centerposition">Submit</button>
+          </form>
+
 
 
           
