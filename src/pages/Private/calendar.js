@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-// import { render } from "react-dom";
+import { Link } from "react-router-dom";
 import ProfileNav from "../../components/ProfileNav";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
@@ -8,7 +7,6 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import PrivateLayout from "../../Layout/Private";
 import styled from "styled-components";
 import Eventbox from "../../components/Eventbox";
-
 import "../../styles/Calendar.css";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
@@ -25,6 +23,14 @@ const Button = styled.button`
   margin: 10px;
 `;
 
+/*
+    Calendar component used is react-big-calendar for its sleek agenda and different
+    weekdays view. We retrieve events through get and pass it on to the calendar.
+    Had trouble implementing a custom component in order to render a modal when clicking
+    on the event instead decided to just make a new page. Click add event in order to create
+    a new event but you much refresh page in order to load the new event.
+*/
+
 moment.locale("en-US");
 const localizer = momentLocalizer(moment);
 // const URL = "http://127.0.0.1:8000/api/calendar/events/"
@@ -39,8 +45,6 @@ const MyCalendar = () => {
   useEffect(() => {
     getEvents();
   }, []);
-
-  // console.log(events)
 
   const getEvents = async () => {
     const response = await axios
@@ -100,6 +104,9 @@ const MyCalendar = () => {
           // }}
         />
         <Button onClick={openEventbox}>Add Event</Button>
+        <Link to="/events">
+            <Button>Edit Events</Button>
+        </Link>
         <Eventbox
           showEventbox={showEventbox}
           setShowEventbox={setShowEventbox}

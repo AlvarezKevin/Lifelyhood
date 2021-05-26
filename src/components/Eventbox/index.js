@@ -10,6 +10,14 @@ import {
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
 
+/*
+  Eventbox component loads up a modal to "Add Event." Through the use of AddEventForm
+  we are able to send a post request using an axios method. Modal uses react-spring to 
+  display with animation. Style.js and modal template made using tutorial from Youtuber
+  "Brian Design." We use showEventbox and setShowEventbox to display the modal like an 
+  off/on switch.
+*/
+
 //   const URL = "http://127.0.0.1:8000/api/calendar/events/"
 const URL = "/api/calendar/events/"
 const Eventbox = ({showEventbox, setShowEventbox}) => {
@@ -23,10 +31,8 @@ const Eventbox = ({showEventbox, setShowEventbox}) => {
     })
 
     const [error, setError] = useState(null);
-    const { setUserDetails } = useAuthCtx();
     const submitHandler = async (data) => {
       try {
-        console.log('data', data);
         const response = await axios.post(URL, data, {
             headers: {
               "Authorization": `Token ${user.token}`

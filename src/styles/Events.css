@@ -1,0 +1,18 @@
+.main-events {
+    margin-top: 6vh;
+    margin-left: 10%;
+    margin-right: 8%;
+    margin-bottom: 15vh;
+    display: grid;
+    flex-direction: table-row;
+    grid-template-rows: auto;
+    grid-row-gap: 2.5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-text {
+    margin: auto;
+    align-self: center;
+    font-size: medium;
+}

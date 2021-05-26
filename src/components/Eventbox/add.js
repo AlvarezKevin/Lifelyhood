@@ -10,7 +10,12 @@ import {
   ErrorMessage,
 } from "./style.js";
 
-function AddEventForm({ onSubmitData, error, showEventbox, setShowEventbox }) {
+/*
+  Similar to sign-up/login form in order to create an event on your account.
+  Must refresh the page in order to get updated. Using axios post in order to create
+  the event. Requires event title and start date and end date. 
+*/
+function AddEventForm({ onSubmitData, error }) {
   const {
     register,
     handleSubmit,
@@ -18,7 +23,26 @@ function AddEventForm({ onSubmitData, error, showEventbox, setShowEventbox }) {
   } = useForm();
   const submitHandler = (data) => {
       console.log('data', data);
-      onSubmitData(data);
+      let makeDateTime
+      if (data.starttime === "" || data.endtime === "") {
+        makeDateTime = {
+          title: data.title,
+          startDate: new Date(data.startdate),
+          endDate: new Date(data.enddate),
+          description: data.description 
+        }
+      }
+      else {
+        const combineStartDate = data.startdate + "T" + data.starttime;
+        const combineEndDate = data.enddate + "T" + data.endtime;
+        makeDateTime = {
+          title: data.title,
+          startDate: new Date(combineStartDate),
+          endDate: new Date(combineEndDate),
+          description: data.description 
+        }
+      }
+      onSubmitData(makeDateTime);
   };
   return (
     <FormStyle onSubmit={handleSubmit(submitHandler)}>

@@ -23,6 +23,7 @@ import Personalspace from "./pages/Private/personalspace";
 //SchoolSpace
 import textEditor from "./pages/Private/textEditor";
 import MyCalendar from "./pages/Private/calendar";
+import MyCalendarEvents from "./pages/Private/calendarEvents";
 import Todos from "./pages/Private/Todos";
 import Links from "./pages/Private/links";
 import Exam from "./pages/Private/exams";
@@ -63,6 +64,7 @@ function App() {
           <Route path="/personal" component={Personalspace} />
           <Route path="/Setting" component={Setting} />
           <Route path="/calendar" component={MyCalendar} />
+          <Route path="/events" component={MyCalendarEvents} />
           {/* SchoolSpace */}
           <Route path="/editor" component={textEditor} />
           <Route path="/exams" component={Exam} />
