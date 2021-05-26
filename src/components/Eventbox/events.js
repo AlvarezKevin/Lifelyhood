@@ -1,3 +1,4 @@
+// Used for testing purposes and are fake events
 export default [
     {
     'title': 'qwertyuiosdfghj',
