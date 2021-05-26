@@ -18,6 +18,17 @@ We're currently at 88%
 ## API Docs
 [Documentation](https://github.com/AlvarezKevin/Lifelyhood/blob/main/AuthAPI-Docs.pdf).
 
+## Video Walkthrough (Website)
+![1  Website](https://user-images.githubusercontent.com/32243848/119588684-5943d700-bd9f-11eb-865d-5f2902841507.gif)
+![2  Website](https://user-images.githubusercontent.com/32243848/119588686-5a750400-bd9f-11eb-81db-cd13a4b4d705.gif)
+![3  Website](https://user-images.githubusercontent.com/32243848/119588688-5b0d9a80-bd9f-11eb-8ee8-9ae6138b2b78.gif)
+![4  Website](https://user-images.githubusercontent.com/32243848/119588692-5c3ec780-bd9f-11eb-8c13-0d5c83027895.gif)
+![5  Website](https://user-images.githubusercontent.com/32243848/119588697-5d6ff480-bd9f-11eb-84b7-08fe3b55cc13.gif)
+![6  Website](https://user-images.githubusercontent.com/32243848/119588702-5ea12180-bd9f-11eb-900c-e261c9e4394b.gif)
+
+## Video Walkthrough (Mobile)
+![1  Mobile](https://user-images.githubusercontent.com/32243848/119588710-619c1200-bd9f-11eb-9705-6a40908b494c.gif)
+
 # Client README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
