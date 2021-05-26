@@ -8,7 +8,7 @@ import "../../styles/Profile.css";
 
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
-
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 const Profile = () => {
   return (
     <PrivateLayout>

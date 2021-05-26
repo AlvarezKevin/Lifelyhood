@@ -10,6 +10,7 @@ import UserInfo from "../../components/UserInfo";
 import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 const Workspace = () => {
   const color = "purple";
   return (

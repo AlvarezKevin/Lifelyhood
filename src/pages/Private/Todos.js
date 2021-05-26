@@ -7,10 +7,15 @@ import { ReactComponent as DownIcon } from "../../images/chevron-down.svg";
 import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
-
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
+// Todo page has the list of user's todos
+// AddTodo is the StyledComponent that contains the input field and button for saving the todo.
+// TodoItem is a component that shows the todo title and show is todo completed or not.
+// Collapse is a "Reactstrap" UI library component to just show or hide the list.
+// TodoWrapper is also a simple div with stylecomponent for styling.
 
 // const URL = "http://127.0.0.1:8000/todos"
-const URL = "/todos"
+const URL = "/todos";
 
 const Todos = () => {
   const { user } = useAuthCtx();
@@ -19,7 +24,6 @@ const Todos = () => {
     todoText: "",
     loading: false,
   });
-  const [userTodoList, setUserTodoList] = useState([{}]);
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
@@ -27,12 +31,13 @@ const Todos = () => {
   }, []);
 
   const getTodos = async () => {
-
-
-    const response = await axios.get(URL, {
-            headers: {
-              "Authorization": `Token ${user.token}`
-            }}).then(function (response) {
+    const response = await axios
+      .get(URL, {
+        headers: {
+          Authorization: `Token ${user.token}`,
+        },
+      })
+      .then(function (response) {
         // handle success
         console.log(response);
       })
@@ -43,30 +48,33 @@ const Todos = () => {
       .then(function () {
         // always executed
       });
-}
+  };
 
   const postTodos = async (data) => {
     try {
-      console.log('todo data', data);
-      const response = await axios.post(URL, data, {
-        headers: {
-          "Authorization": `Token ${user.token}`
-        }}).then(function (response) {
+      console.log("todo data", data);
+      const response = await axios
+        .post(URL, data, {
+          headers: {
+            Authorization: `Token ${user.token}`,
+          },
+        })
+        .then(function (response) {
           // handle success
           console.log(response);
-          })
-          .catch(function (error) {
+        })
+        .catch(function (error) {
           // handle error
           console.log(error);
-          })
-          .then(function () {
+        })
+        .then(function () {
           // always executed
-      });
+        });
     } catch (err) {
       console.log(`err`);
       setError(`${err.message}`);
     }
-  }
+  };
 
   const setTodoDetail = (obj) => setTodo((o) => ({ ...o, ...obj }));
   const [open, setOpen] = useState({
@@ -96,7 +104,7 @@ const Todos = () => {
 
         const todoData = {
           text: todo.todoText,
-          completed: false
+          completed: false,
         };
         postTodos(todoData);
       }, 200);
@@ -147,7 +155,7 @@ const Todos = () => {
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          Todo
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList

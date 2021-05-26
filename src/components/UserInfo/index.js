@@ -3,17 +3,17 @@ import profile from "../../images/profile/user/default.svg";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
-
+// UserInfo is the reusable component that is shown on top of every space page. It shows the title of space and img.
 const UserInfo = () => {
   const { user } = useAuthCtx();
   let location = useLocation();
   let heading;
   if (location.pathname === "/work") {
-    heading = "User's WorkSpace";
+    heading = `${user?.username}'s WorkSpace`;
   } else if (location.pathname === "/school") {
-    heading = "User's SchoolSpace";
+    heading = `${user?.username}'s SchoolSpace`;
   } else if (location.pathname === "/personal") {
-    heading = "User's PersonalSpace";
+    heading = `${user?.username}'s PersonalSpace`;
   } else {
     heading = user.username || "Username";
   }

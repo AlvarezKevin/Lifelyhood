@@ -7,7 +7,7 @@ import { ReactComponent as DownIcon } from "../../images/chevron-down.svg";
 import { ReactComponent as UpIcon } from "../../images/chevron-up.svg";
 import axios from "axios";
 import { useAuthCtx } from "../../Hooks/useAuthContext";
-
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 // const URL = "http://127.0.0.1:8000/travel"
 const URL = "/travel";
 
@@ -18,7 +18,6 @@ const Travel = () => {
     todoText: "",
     loading: false,
   });
-  const [userTodoList, setUserTodoList] = useState([{}]);
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
@@ -140,14 +139,14 @@ const Travel = () => {
           addHandler={onAddTodo}
         />
 
-        {/* Task TODOS */}
+        {/* List */}
         <h3 onClick={toggleUnCheckedCollapse}>
           {isUncheckedListOpen ? (
             <DownIcon width="18" />
           ) : (
             <UpIcon width="18" />
           )}{" "}
-          Tasks
+          List
         </h3>
         <Collapse isOpen={isUncheckedListOpen}>
           {todoList
@@ -162,7 +161,7 @@ const Travel = () => {
             ))}
         </Collapse>
         <br />
-        {/* COMPLETED TODOS */}
+        {/* COMPLETED List */}
         <h3 onClick={toggleCheckedCollapse}>
           {isCheckedListOpen ? <DownIcon width="18" /> : <UpIcon width="18" />}{" "}
           Completed
