@@ -7,8 +7,13 @@ import {
     ModalContent,
     CloseModalButton
   } from "./style.js";
+import axios from "axios";
+import { useAuthCtx } from "../../Hooks/useAuthContext";
 
+//   const URL = "http://127.0.0.1:8000/api/calendar/events/"
+const URL = "/api/calendar/events/"
 const Eventbox = ({showEventbox, setShowEventbox}) => {
+    const { user } = useAuthCtx();
     const animation = useSpring({
         config: {
             duration: 250
@@ -18,19 +23,24 @@ const Eventbox = ({showEventbox, setShowEventbox}) => {
     })
 
     const [error, setError] = useState(null);
+    const { setUserDetails } = useAuthCtx();
     const submitHandler = async (data) => {
       try {
-        const { title, password } = data;
-        // if (email !== adminUser.email) {
-        //   throw new Error("Invalid Email");
-        // } else if (password !== adminUser.password) {
-        //   throw new Error("Invalid Password");
-        // }
-        // setUserDetails({
-        //   username: "Anonymous",
-        //   email,
-        //   token: "a1s2d3f4cdfsdf",
-        // });
+        console.log('data', data);
+        const response = await axios.post(URL, data, {
+            headers: {
+              "Authorization": `Token ${user.token}`
+            }}).then(function (response) {
+            // handle success
+            console.log(response);
+            })
+            .catch(function (error) {
+            // handle error
+            console.log(error);
+            })
+            .then(function () {
+            // always executed
+        });
       } catch (err) {
         console.log(`err`);
         setError(`${err.message}`);

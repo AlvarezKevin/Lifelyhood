@@ -4,12 +4,13 @@ import schedule from "../../images/school/schedule.svg";
 import clubs from "../../images/school/clubs.svg";
 import exams from "../../images/school/exams.svg";
 import assign from "../../images/school/assign.svg";
-import add from "../../images/school/add.svg";
+import meetings from "../../images/work/meetings.svg";
 import ProfileNav from "../../components/ProfileNav";
 import UserInfo from "../../components/UserInfo";
 import "../../styles/Pages.css";
 import SpaceItem from "./../../components/SpaceItem";
 import PrivateLayout from "./../../Layout/Private";
+//The private directory has all private pages (including this file) that are accessible only to the authenticated users. All pages are wrapped inside the private layout.
 const Schoolspace = () => {
   const color = "red";
   return (
@@ -26,16 +27,17 @@ const Schoolspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/schedule"
-            imgSrc={schedule}
-            title="Schedule"
-          />
-          <SpaceItem
-            colorClassName={color}
             to="/todos"
             imgSrc={clubs}
             title="Todos"
           />
+          <SpaceItem
+            colorClassName={color}
+            to="/links"
+            imgSrc={meetings}
+            title="Video Conference Links"
+          />
+
           <SpaceItem
             colorClassName={color}
             to="/exams"
@@ -44,15 +46,15 @@ const Schoolspace = () => {
           />
           <SpaceItem
             colorClassName={color}
-            to="/assignments"
-            imgSrc={assign}
-            title="Assignments"
+            to="/calendar"
+            imgSrc={schedule}
+            title="Schedule"
           />
           <SpaceItem
             colorClassName={color}
-            to="/editor"
-            imgSrc={add}
-            title="Add Page"
+            to="/assignments"
+            imgSrc={assign}
+            title="Assignments"
           />
         </div>
       </div>

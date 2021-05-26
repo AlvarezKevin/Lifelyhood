@@ -1,5 +1,5 @@
 import pic from "../../images/about/manage.png";
-import Mike from "../../images/about/mikePic.jpeg";
+import Mike from "../../images/about/mikePic.jpg";
 import Kevin from "../../images/about/kPic.jpg";
 import Niharika from "../../images/about/nPic.jpg";
 import Myriam from "../../images/about/mPic.jpg";
@@ -8,6 +8,7 @@ import Hammad from "../../images/about/hammedPic.jpg";
 import PublicLayout from "./../../Layout/Public";
 import "../../styles/About.css";
 import { FlexFooter } from "./AuthStyle";
+// The public directory has all public pages that are accessible only when the user is not authenticated. And all pages are wrapped inside the public layout.
 export default function AboutPage() {
   return (
     <PublicLayout isVisibleOnPrivate={true}>

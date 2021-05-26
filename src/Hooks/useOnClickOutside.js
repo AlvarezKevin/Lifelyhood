@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+// It's a hook to listen to your specific component. we have to pass the ref of that component. And whenever user click the outside of that specific component it will trigger.
 function useOnClickOutside(ref, callback) {
   useEffect(() => {
     const listener = (event) => {
